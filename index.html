@@ -1,11 +1,10 @@
 <!doctype html>
-
 <html lang="id">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Spesialist Meta Ads Manager — Paket Iklan</title>
-  <meta name="description" content="Layanan profesional Meta (Facebook & Instagram) Ads — Paket Silver, Gold, Platinum. Termasuk manajemen, desain materi, dan strategi scale up." />
+  <meta name="description" content="Layanan profesional Meta (Facebook & Instagram) Ads — Paket Starter, Silver, Gold, Platinum. Termasuk manajemen, desain materi, dan strategi scale up." />
   <style>
     :root{
       --bg:#f5f7fb;
@@ -19,57 +18,66 @@
     }
     *{box-sizing:border-box}
     body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:#0f172a}
-    .wrap{max-width:1100px;margin:36px auto;padding:24px}/* Header */
-header{display:flex;align-items:center;gap:18px}
-.logo{width:84px;height:84px;border-radius:18px;background:linear-gradient(135deg,var(--primary),#35a3ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:22px;box-shadow:var(--shadow)}
-.brand h1{margin:0;font-size:20px}
-.brand p{margin:6px 0 0;color:var(--muted)}
+    .wrap{max-width:1100px;margin:36px auto;padding:24px}
 
-/* Hero */
-.hero{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding:26px;border-radius:18px;background:linear-gradient(180deg,rgba(11,99,214,0.06),rgba(255,255,255,0.6));box-shadow:0 12px 36px rgba(11,99,214,0.04)}
-.hero-left{max-width:66%}
-.hero-left h2{margin:0;font-size:26px;color:var(--primary)}
-.hero-left p{margin-top:8px;color:var(--muted)}
-.hero-cta{display:flex;gap:12px}
-.btn{background:var(--primary);color:white;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700}
-.btn.secondary{background:white;color:var(--primary);border:1px solid rgba(11,99,214,0.12)}
+    /* Header */
+    header{display:flex;align-items:center;gap:18px}
+    .logo{width:84px;height:84px;border-radius:18px;background:linear-gradient(135deg,var(--primary),#35a3ff);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:22px;box-shadow:var(--shadow)}
+    .brand h1{margin:0;font-size:20px}
+    .brand p{margin:6px 0 0;color:var(--muted)}
 
-/* Packages */
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
-@media (max-width:980px){.grid{grid-template-columns:1fr}}
+    /* Hero */
+    .hero{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding:26px;border-radius:18px;background:linear-gradient(180deg,rgba(11,99,214,0.06),rgba(255,255,255,0.6));box-shadow:0 12px 36px rgba(11,99,214,0.04)}
+    .hero-left{max-width:66%}
+    .hero-left h2{margin:0;font-size:26px;color:var(--primary)}
+    .hero-left p{margin-top:8px;color:var(--muted)}
+    .hero-cta{display:flex;gap:12px}
+    .btn{background:var(--primary);color:white;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700}
+    .btn.secondary{background:white;color:var(--primary);border:1px solid rgba(11,99,214,0.12)}
 
-.card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 12px 30px rgba(16,24,40,0.04);border:1px solid rgba(15,23,42,0.03)}
-.card .title{display:flex;justify-content:space-between;align-items:center}
-.card h3{margin:0;font-size:18px;color:#08163b}
-.price{font-weight:800;font-size:18px;color:var(--primary);margin-top:8px}
-.meta{color:var(--muted);font-size:13px;margin-top:8px}
-.benefit{margin-top:12px;font-size:14px}
-.range{margin-top:10px;font-weight:700}
+    /* Packages */
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:20px}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}}
 
-.platinum{border:2px solid rgba(210,177,0,0.28);background:linear-gradient(180deg,#fffbeb,#ffffff)}
+    .card{background:var(--card);padding:20px;border-radius:14px;box-shadow:0 12px 30px rgba(16,24,40,0.04);border:1px solid rgba(15,23,42,0.03)}
+    .card .title{display:flex;justify-content:space-between;align-items:center}
+    .card h3{margin:0;font-size:18px;color:#08163b}
+    .price{font-weight:800;font-size:18px;color:var(--primary);margin-top:8px}
+    .meta{color:var(--muted);font-size:13px;margin-top:8px}
+    .benefit{margin-top:12px;font-size:14px}
+    .range{margin-top:10px;font-weight:700}
 
-/* Details */
-.details{display:flex;gap:20px;margin-top:28px}
-@media (max-width:980px){.details{flex-direction:column}}
-.panel{flex:1;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,0.04)}
-table{width:100%;border-collapse:collapse;margin-top:12px}
-th,td{padding:8px 6px;text-align:left}
-th{color:var(--muted);font-size:13px}
-td{font-weight:700}
-.note{color:var(--muted);font-size:13px;margin-top:10px}
+    .platinum{border:2px solid rgba(210,177,0,0.28);background:linear-gradient(180deg,#fffbeb,#ffffff)}
 
-/* Scale up */
-.scale{margin-top:28px;padding:18px;background:linear-gradient(180deg,rgba(11,99,214,0.03),transparent);border-radius:12px}
-.scale h3{margin-top:0;color:var(--primary)}
-.scale ul{margin-left:18px}
+    /* Details */
+    .details{display:flex;gap:20px;margin-top:28px}
+    @media (max-width:980px){.details{flex-direction:column}}
+    .panel{flex:1;background:var(--card);padding:18px;border-radius:12px;box-shadow:0 12px 30px rgba(2,6,23,0.04)}
+    table{width:100%;border-collapse:collapse;margin-top:12px}
+    th,td{padding:8px 6px;text-align:left}
+    th{color:var(--muted);font-size:13px}
+    td{font-weight:700}
+    .note{color:var(--muted);font-size:13px;margin-top:10px}
 
-/* Payment */
-.payment{margin-top:18px;padding:14px;border-radius:12px;background:#fffbe6;border:1px solid rgba(210,177,0,0.12)}
-.payment p{margin:6px 0;font-weight:700}
-.start{margin-top:10px;color:var(--muted);font-size:14px}
+    /* Scale up */
+    .scale{margin-top:28px;padding:18px;background:linear-gradient(180deg,rgba(11,99,214,0.03),transparent);border-radius:12px}
+    .scale h3{margin-top:0;color:var(--primary)}
+    .scale ul{margin-left:18px}
 
-footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+    /* Payment */
+    .payment{margin-top:18px;padding:14px;border-radius:12px;background:#fffbe6;border:1px solid rgba(210,177,0,0.12)}
+    .payment p{margin:6px 0;font-weight:700}
+    .start{margin-top:10px;color:var(--muted);font-size:14px}
 
+    footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
+
+    /* Popup form styles */
+    #orderPopup{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);backdrop-filter:blur(3px);justify-content:center;align-items:center;z-index:9999}
+    #orderPopup .box{background:white;padding:22px;border-radius:16px;width:90%;max-width:420px;box-shadow:0 12px 40px rgba(0,0,0,0.2);position:relative}
+    #orderPopup label{font-size:13px;color:var(--muted);display:block;margin-top:8px}
+    #orderPopup input,#orderPopup select{width:100%;padding:10px;margin-top:6px;border-radius:8px;border:1px solid #cbd5e1}
+    #orderPopup .btn-send{width:100%;padding:12px;background:#0b63d6;color:white;border:none;border-radius:10px;font-weight:700;font-size:16px}
+    #orderPopup .btn-close{margin-top:10px;width:100%;padding:10px;background:#e2e8f0;border:none;border-radius:10px;font-weight:700}
   </style>
 </head>
 <body>
@@ -80,157 +88,180 @@ footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
         <h1>Spesialist Meta Ads Manager</h1>
         <p>Solusi iklan Facebook & Instagram — Profesional, Terukur, dan Fokus ROI.</p>
       </div>
-    </header><section class="hero">
-  <div class="hero-left">
-    <h2>Pilih Paket Iklan yang Tepat untuk Bisnis Anda</h2>
-    <p>Kami menyediakan paket untuk bisnis online dan toko lokal (UMKM). Semua paket termasuk setup campaign, optimasi, dan laporan.</p>
-    <div style="margin-top:12px" class="hero-cta">
-      <a class="btn" href="https://wa.me/6289531332329">Hubungi via WhatsApp</a>
-      <a class="btn secondary" href="#packages">Lihat Paket</a>
-    </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <h2>Pilih Paket Iklan yang Tepat untuk Bisnis Anda</h2>
+        <p>Kami menyediakan paket untuk bisnis online dan toko lokal (UMKM). Semua paket termasuk setup campaign, optimasi, dan laporan.</p>
+        <div style="margin-top:12px" class="hero-cta">
+          <a class="btn" href="https://wa.me/6289531332329">Hubungi via WhatsApp</a>
+          <a class="btn secondary" href="#packages">Lihat Paket</a>
+        </div>
+      </div>
+      <div style="max-width:320px;text-align:right">
+        <div style="font-weight:800;color:var(--primary);font-size:22px">Penawaran Terbatas</div>
+        <div style="color:var(--muted);margin-top:8px">Payment via BCA • Pengerjaan langsung setelah pembayaran</div>
+      </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" style="margin-top:26px">
+      <div class="grid">
+
+        <!-- Starter -->
+        <article class="card">
+          <div class="title"><h3>Paket Starter</h3><div class="price">Rp20.000 / hari</div></div>
+          <div class="meta">Durasi: 2 hari • Total Iklan: <strong>Rp40.000</strong></div>
+          <div class="benefit"><strong>Biaya Jasa:</strong> Rp16.000</div>
+          <div class="benefit"><strong>Total (Iklan + Jasa):</strong> Rp56.000</div>
+          <div class="benefit"><strong>Benefit:</strong> 1x Konsultasi Materi Iklan + Free Desain Postingan Iklan</div>
+
+          <div class="range"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target seluruh Indonesia):</span><br>~420 — 4.200 orang</div>
+          <div class="range" style="margin-top:6px"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target lokal):</span><br>~125 — 2.500 orang</div>
+
+          <div style="margin-top:12px"><a class="btn" href="#contact">Pesan Paket Starter</a></div>
+        </article>
+
+        <!-- Silver -->
+        <article class="card">
+          <div class="title"><h3>Paket Silver</h3><div class="price">Rp20.000 / hari</div></div>
+          <div class="meta">Durasi: 5 hari • Total Iklan: <strong>Rp100.000</strong></div>
+          <div class="benefit"><strong>Biaya Jasa:</strong> Rp50.000</div>
+          <div class="benefit"><strong>Total (Iklan + Jasa):</strong> Rp150.000</div>
+          <div class="benefit"><strong>Benefit:</strong> 1x Konsultasi Materi Iklan + Free Desain Postingan Iklan</div>
+
+          <div class="range"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target seluruh Indonesia):</span><br>~833 — 8.334 orang</div>
+          <div class="range" style="margin-top:6px"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target lokal):</span><br>~249 — 5.001 orang</div>
+
+          <div style="margin-top:12px"><a class="btn" href="#contact">Pesan Paket Silver</a></div>
+        </article>
+
+        <!-- Gold -->
+        <article class="card">
+          <div class="title"><h3>Paket Gold</h3><div class="price">Rp65.000 / hari</div></div>
+          <div class="meta">Durasi: 10 hari • Total Iklan: <strong>Rp650.000</strong></div>
+          <div class="benefit"><strong>Biaya Jasa:</strong> Rp150.000</div>
+          <div class="benefit"><strong>Total (Iklan + Jasa):</strong> Rp800.000</div>
+          <div class="benefit"><strong>Benefit:</strong> 1x Konsultasi + Free 1x Revisi Materi & Desain Postingan</div>
+
+          <div class="range"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target seluruh Indonesia):</span><br>~5.416 — 54.167 orang</div>
+          <div class="range" style="margin-top:6px"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target lokal):</span><br>~1.624 — 32.501 orang</div>
+
+          <div style="margin-top:12px"><a class="btn" href="#contact">Pesan Paket Gold</a></div>
+        </article>
+
+        <!-- Platinum -->
+        <article class="card platinum">
+          <div class="title"><h3>Paket Platinum</h3><div class="price">Rp85.000 / hari</div></div>
+          <div class="meta">Durasi: 30 hari • Total Iklan: <strong>Rp2.550.000</strong></div>
+          <div class="benefit"><strong>Biaya Jasa:</strong> Rp1.500.000</div>
+          <div class="benefit"><strong>Total (Iklan + Jasa):</strong> Rp4.050.000</div>
+          <div class="benefit"><strong>Benefit:</strong> 3x Konsultasi + Bonus Strategi Bisnis + Full Desain Materi Iklan</div>
+
+          <div class="range"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target seluruh Indonesia):</span><br>~21.250 — 212.500 orang</div>
+          <div class="range" style="margin-top:6px"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target lokal):</span><br>~6.375 — 127.500 orang</div>
+
+          <div style="margin-top:12px"><a class="btn" href="#contact">Pesan Paket Platinum</a></div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Details & Pricing -->
+    <section class="details">
+      <div class="panel">
+        <h3>Rincian Biaya</h3>
+        <table>
+          <thead><tr><th>Paket</th><th>Total Iklan</th><th>Biaya Jasa</th><th>Grand Total</th></tr></thead>
+          <tbody>
+            <tr><td>Starter</td><td>Rp40.000</td><td>Rp16.000</td><td>Rp56.000</td></tr>
+            <tr><td>Silver</td><td>Rp100.000</td><td>Rp50.000</td><td>Rp150.000</td></tr>
+            <tr><td>Gold</td><td>Rp650.000</td><td>Rp150.000</td><td>Rp800.000</td></tr>
+            <tr><td>Platinum</td><td>Rp2.550.000</td><td>Rp1.500.000</td><td>Rp4.050.000</td></tr>
+          </tbody>
+        </table>
+        <p class="note">Catatan: "Total Iklan" adalah anggaran yang akan digunakan pada platform Meta (Facebook & Instagram). Biaya jasa adalah untuk setup, optimasi, dan laporan.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Asumsi Perhitungan Jangkauan</h3>
+        <p class="note">Estimasi jangkauan dibuat berdasarkan asumsi konservatif:</p>
+        <ul>
+          <li>CPM (biaya per 1.000 tayangan): <strong>Rp10.000 — Rp40.000</strong></li>
+          <li>Frekuensi rata-rata (berapa kali iklan terlihat per orang): <strong>1.2 — 3.0</strong></li>
+        </ul>
+        <p class="note">Jangkauan aktual dapat berbeda tergantung target, kreatifitas iklan, kualitas landing page, penempatan, dan kompetisi iklan.</p>
+
+        <div class="scale">
+          <h3>📌 Kenapa Ada Paket <em>Scale Up</em>?</h3>
+          <p>Dalam dunia iklan digital, prosesnya nggak cukup hanya pasang iklan → dapat hasil. Tahap terpenting adalah <strong>menggandakan hasil dari iklan yang sudah terbukti bekerja</strong>. Berikut beberapa alasan utama:</p>
+          <ul>
+            <li><strong>1. Agar bisnis bisa berkembang lebih cepat</strong> — Jika iklan sudah menghasilkan chat & closing, menaikkan budget akan: menambah volume pembeli, mempercepat omzet, memperluas jangkauan, dan meningkatkan dominasi pasar.</li>
+            <li><strong>2. Setiap iklan punya masa “peak performance”</strong> — Saat iklan stabil & menghasilkan, kita memanfaatkan momentum itu dengan menaikkan budget bertahap agar hasil tetap stabil.</li>
+            <li><strong>3. Tidak efektif jika memulai ulang campaign baru</strong> — Daripada memulai dari nol yang belum tentu berhasil, gunakan iklan proven lalu scale up sambil jaga optimasi.</li>
+            <li><strong>4. Menghindari pemborosan</strong> — Scale Up memastikan anggaran besar tidak terbuang karena kenaikan budget bertahap, pengujian terukur, dan pemeliharaan performa.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment -->
+    <section style="margin-top:28px">
+      <div class="payment">
+        <h3>Pembayaran</h3>
+        <p>Payment HANYA via Bank BCA</p>
+        <p>Nomor: <strong>5965093068</strong></p>
+        <p>Atas nama: <strong>FERI PRADANA</strong></p>
+        <p class="start">Setelah pembayaran, pengerjaan akan segera dimulai: susun materi & desain iklan → setup campaign → optimasi hingga iklan tayang. Segera bayar untuk menghindari antrian.</p>
+      </div>
+    </section>
+
+    <footer id="contact">
+      © 2025 • Spesialist Meta Ads Manager • Hubungi via WhatsApp untuk pemesanan dan audit gratis.
+    </footer>
   </div>
-  <div style="max-width:320px;text-align:right">
-    <div style="font-weight:800;color:var(--primary);font-size:22px">Penawaran Terbatas</div>
-    <div style="color:var(--muted);margin-top:8px">Payment via BCA • Pengerjaan langsung setelah pembayaran</div>
-  </div>
-</section>
 
-<!-- Packages -->
-<section id="packages" style="margin-top:26px">
-  <div class="grid">
-
-    <!-- Silver -->
-    <article class="card">
-      <div class="title"><h3>Paket Silver</h3><div class="price">Rp20.000 / hari</div></div>
-      <div class="meta">Durasi: 5 hari • Total Iklan: <strong>Rp100.000</strong></div>
-      <div class="benefit"><strong>Biaya Jasa:</strong> Rp50.000</div>
-      <div class="benefit"><strong>Benefit:</strong> 1x Konsultasi Materi Iklan + Free Desain Postingan Iklan</div>
-
-      <div class="range"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target seluruh Indonesia):</span><br>~833 — 8.334 orang</div>
-      <div class="range" style="margin-top:6px"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target lokal):</span><br>~249 — 5.001 orang</div>
-
-      <div style="margin-top:12px"><a class="btn" href="https://wa.me/6289531332329">Pesan Paket Silver</a></div>
-    </article>
-
-    <!-- Gold -->
-    <article class="card">
-      <div class="title"><h3>Paket Gold</h3><div class="price">Rp65.000 / hari</div></div>
-      <div class="meta">Durasi: 10 hari • Total Iklan: <strong>Rp650.000</strong></div>
-      <div class="benefit"><strong>Biaya Jasa:</strong> Rp150.000</div>
-      <div class="benefit"><strong>Benefit:</strong> 1x Konsultasi + Free 1x Revisi Materi & Desain Postingan</div>
-
-      <div class="range"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target seluruh Indonesia):</span><br>~5.416 — 54.167 orang</div>
-      <div class="range" style="margin-top:6px"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target lokal):</span><br>~1.624 — 32.501 orang</div>
-
-      <div style="margin-top:12px"><a class="btn" href="https://wa.me/6289531332329">Pesan Paket Gold</a></div>
-    </article>
-
-    <!-- Platinum -->
-    <article class="card platinum">
-      <div class="title"><h3>Paket Platinum</h3><div class="price">Rp85.000 / hari</div></div>
-      <div class="meta">Durasi: 30 hari • Total Iklan: <strong>Rp2.550.000</strong></div>
-      <div class="benefit"><strong>Biaya Jasa:</strong> Rp1.500.000</div>
-      <div class="benefit"><strong>Benefit:</strong> 3x Konsultasi + Bonus Strategi Bisnis + Full Desain Materi Iklan</div>
-
-      <div class="range"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target seluruh Indonesia):</span><br>~21.250 — 212.500 orang</div>
-      <div class="range" style="margin-top:6px"><span style="color:var(--muted);font-weight:600">Estimasi jangkauan (target lokal):</span><br>~6.375 — 127.500 orang</div>
-
-      <div style="margin-top:12px"><a class="btn" href="https://wa.me/6289531332329">Pesan Paket Platinum</a></div>
-    </article>
-
-  </div>
-</section>
-
-<!-- Details & Pricing -->
-<section class="details">
-  <div class="panel">
-    <h3>Rincian Biaya</h3>
-    <table>
-      <thead><tr><th>Paket</th><th>Total Iklan</th><th>Biaya Jasa</th><th>Grand Total</th></tr></thead>
-      <tbody>
-        <tr><td>Silver</td><td>Rp100.000</td><td>Rp50.000</td><td>Rp150.000</td></tr>
-        <tr><td>Gold</td><td>Rp650.000</td><td>Rp150.000</td><td>Rp800.000</td></tr>
-        <tr><td>Platinum</td><td>Rp2.550.000</td><td>Rp1.500.000</td><td>Rp4.050.000</td></tr>
-      </tbody>
-    </table>
-    <p class="note">Catatan: "Total Iklan" adalah anggaran yang akan digunakan pada platform Meta (Facebook & Instagram). Biaya jasa adalah untuk setup, optimasi, dan laporan.</p>
-  </div>
-
-  <div class="panel">
-    <h3>Asumsi Perhitungan Jangkauan</h3>
-    <p class="note">Estimasi jangkauan dibuat berdasarkan asumsi konservatif:</p>
-    <ul>
-      <li>CPM (biaya per 1.000 tayangan): <strong>Rp10.000 — Rp40.000</strong></li>
-      <li>Frekuensi rata‑rata (berapa kali iklan terlihat per orang): <strong>1.2 — 3.0</strong></li>
-    </ul>
-    <p class="note">Jangkauan aktual dapat berbeda tergantung target, kreatifitas iklan, kualitas landing page, penempatan, dan kompetisi iklan.</p>
-
-    <div class="scale">
-      <h3>📌 Kenapa Ada Paket <em>Scale Up</em>?</h3>
-      <p>Dalam dunia iklan digital, prosesnya nggak cukup hanya pasang iklan → dapat hasil. Tahap terpenting adalah <strong>menggandakan hasil dari iklan yang sudah terbukti bekerja</strong>. Berikut beberapa alasan utama:</p>
-      <ul>
-        <li><strong>1. Agar bisnis bisa berkembang lebih cepat</strong> — Jika iklan sudah menghasilkan chat & closing, menaikkan budget akan: menambah volume pembeli, mempercepat omzet, memperluas jangkauan, dan meningkatkan dominasi pasar.</li>
-        <li><strong>2. Setiap iklan punya masa “peak performance”</strong> — Saat iklan stabil & menghasilkan, kita memanfaatkan momentum itu dengan menaikkan budget bertahap agar hasil tetap stabil.</li>
-        <li><strong>3. Tidak efektif jika memulai ulang campaign baru</strong> — Daripada memulai dari nol yang belum tentu berhasil, gunakan iklan proven lalu scale up sambil jaga optimasi.</li>
-        <li><strong>4. Menghindari pemborosan</strong> — Scale Up memastikan anggaran besar tidak terbuang karena kenaikan budget bertahap, pengujian terukur, dan pemeliharaan performa.</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Payment -->
-<section style="margin-top:28px">
-  <div class="payment">
-    <h3>Pembayaran</h3>
-    <p>Payment HANYA via Bank BCA</p>
-    <p>Nomor: <strong>5965093068</strong></p>
-    <p>Atas nama: <strong>FERI PRADANA</strong></p>
-    <p class="start">Setelah pembayaran, pengerjaan akan segera dimulai: susun materi & desain iklan → setup campaign → optimasi hingga iklan tayang. Segera bayar untuk menghindari antrian.</p>
-  </div>
-</section>
-
-<footer id="contact">
-  © 2025 • Spesialist Meta Ads Manager • Hubungi via WhatsApp untuk pemesanan dan audit gratis.
-</footer>
-
-  </div>
   <!-- Popup Order Form -->
-  <div id="orderPopup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);backdrop-filter:blur(3px);justify-content:center;align-items:center;z-index:9999;">
-    <div style="background:white;padding:22px;border-radius:16px;width:90%;max-width:420px;box-shadow:0 12px 40px rgba(0,0,0,0.2);position:relative;">
-      <h3 style="margin-top:0;text-align:center;color:#0b63d6">Form Pemesanan</h3><label>Nama :</label>
-  <input id="f_nama" type="text" style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1" />
+  <div id="orderPopup">
+    <div class="box">
+      <h3 style="margin-top:0;text-align:center;color:#0b63d6">Form Pemesanan</h3>
 
-  <label>Alamat :</label>
-  <input id="f_alamat" type="text" style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1" />
+      <label>Nama :</label>
+      <input id="f_nama" type="text" />
 
-  <label>Nomor WA :</label>
-  <input id="f_wa" type="text" style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1" />
+      <label>Alamat :</label>
+      <input id="f_alamat" type="text" />
 
-  <label>Jenis Paket :</label>
-  <select id="f_paket" style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1">
-    <option value="Silver">Paket Silver (Rp150.000)</option>
-    <option value="Gold">Paket Gold (Rp800.000)</option>
-    <option value="Platinum">Paket Platinum (Rp4.050.000)</option>
-  </select>
+      <label>Nomor WA :</label>
+      <input id="f_wa" type="text" placeholder="contoh: 0895xxxx" />
 
-  <label>Total Pembayaran (otomatis + kode unik):</label>
-  <input id="f_total" type="text" readonly style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1;background:#f1f5f9;font-weight:700" />
+      <label>Jenis Paket :</label>
+      <select id="f_paket">
+        <option value="Starter">Paket Starter (Rp56.000)</option>
+        <option value="Silver">Paket Silver (Rp150.000)</option>
+        <option value="Gold">Paket Gold (Rp800.000)</option>
+        <option value="Platinum">Paket Platinum (Rp4.050.000)</option>
+      </select>
 
-  <label>Metode Bayar :</label>
-  <div style="background:#fffbe6;border:1px solid #e5dd9c;padding:12px;border-radius:8px;margin-top:6px;margin-bottom:14px;font-weight:700">
-    BANK BCA — 5965093068 (Feri Pradana)
+      <label>Total Pembayaran (otomatis + kode unik):</label>
+      <input id="f_total" type="text" readonly />
+
+      <label>Metode Bayar :</label>
+      <div style="background:#fffbe6;border:1px solid #e5dd9c;padding:12px;border-radius:8px;margin-top:6px;margin-bottom:14px;font-weight:700">
+        BANK BCA — 5965093068 (Feri Pradana)
+      </div>
+
+      <button class="btn-send" onclick="kirimWA()">Kirim Pesanan via WhatsApp</button>
+      <button class="btn-close" onclick="closePopup()">Tutup</button>
+    </div>
   </div>
 
-  <button onclick="kirimWA()" style="width:100%;padding:12px;background:#0b63d6;color:white;border:none;border-radius:10px;font-weight:700;font-size:16px">Kirim Pesanan via WhatsApp</button>
-
-  <button onclick="closePopup()" style="margin-top:10px;width:100%;padding:10px;background:#e2e8f0;border:none;border-radius:10px;font-weight:700">Tutup</button>
-</div>
-
-  </div>  <script>
-    // Buka popup
+  <script>
+    // Open popup when any package "Pesan" button clicked
     document.querySelectorAll('.btn').forEach(btn => {
       btn.addEventListener('click', function(e){
-        if(this.textContent.includes('Pesan')){
+        if(this.textContent.toLowerCase().includes('pesan')){
           e.preventDefault();
           openPopup();
         }
@@ -248,33 +279,41 @@ footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
     function generateTotal(){
       const paket = document.getElementById('f_paket').value;
       let base = 0;
+      if(paket === 'Starter') base = 56000;
       if(paket === 'Silver') base = 150000;
       if(paket === 'Gold') base = 800000;
       if(paket === 'Platinum') base = 4050000;
 
       const kode = Math.floor(100 + Math.random()*900); // 3 digit unik
       const total = base + kode;
-      document.getElementById('f_total').value = total;
+      // format with thousand separators (dot)
+      document.getElementById('f_total').value = total.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") + " (kode unik: " + kode + ")";
     }
 
     document.getElementById('f_paket').addEventListener('change', generateTotal);
 
     function kirimWA(){
-      const nama = document.getElementById('f_nama').value;
-      const alamat = document.getElementById('f_alamat').value;
-      const wa = document.getElementById('f_wa').value;
-      const paket = document.getElementById('f_paket').value;
-      const total = document.getElementById('f_total').value;
+      const nama = encodeURIComponent(document.getElementById('f_nama').value || '-');
+      const alamat = encodeURIComponent(document.getElementById('f_alamat').value || '-');
+      const wa = encodeURIComponent(document.getElementById('f_wa').value || '-');
+      const paket = encodeURIComponent(document.getElementById('f_paket').value);
+      const totalRaw = document.getElementById('f_total').value;
 
       const msg = `Halo, saya mau memesan paket iklan.%0A%0A` +
         `Nama: ${nama}%0A` +
         `Alamat: ${alamat}%0A` +
         `Nomor WA: ${wa}%0A` +
         `Paket: ${paket}%0A` +
-        `Total Pembayaran: Rp${total}%0A%0A` +
+        `Total Pembayaran: ${encodeURIComponent(totalRaw)}%0A%0A` +
         `Metode Bayar: BANK BCA 5965093068 a.n Feri Pradana`;
 
       window.open(`https://wa.me/6289531332329?text=${msg}`, '_blank');
     }
-  </script></body>
-</html>
+
+    // Close popup when clicking outside box
+    document.getElementById('orderPopup').addEventListener('click', function(e){
+      if(e.target === this) closePopup();
+    });
+  </script>
+</body>
+  </html>
