@@ -1,224 +1,311 @@
-<!DOCTYPE html><html lang="id">
+<!doctype html>
+<html lang="id">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Paket Iklan FB & IG - Gold Edition</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #000;
-            color: #fff;
-        }
-        header {
-            padding: 40px 20px;
-            text-align: center;
-            background: linear-gradient(180deg, #222, #000);
-        }
-        h1 {
-            color: gold;
-            font-size: 36px;
-            margin: 0;
-            font-weight: bold;
-        }
-        .packages {
-            padding: 50px 20px;
-            text-align: center;
-        }
-        .package-box {
-            border: 2px solid gold;
-            border-radius: 12px;
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 500px;
-            background: #111;
-            box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
-        }
-        .package-title {
-            font-size: 26px;
-            color: gold;
-            font-weight: bold;
-        }
-        .btn-pesan {
-            display: inline-block;
-            padding: 12px 20px;
-            background: gold;
-            color: #000;
-            border-radius: 8px;
-            font-weight: bold;
-            text-decoration: none;
-            margin-top: 15px;
-        }
-        .testimonials {
-            padding: 50px 20px;
-            background: #111;
-            text-align: center;
-        }
-        .testimonials h2 {
-            color: gold;
-            font-size: 32px;
-            font-weight: bold;
-        }
-        ul {
-            text-align: left;
-            max-width: 800px;
-            margin: auto;
-            line-height: 1.7;
-        }
-        footer {
-            padding: 20px;
-            text-align: center;
-            background: #000;
-            color: #888;
-        }
-        /* Popup */
-        #popupForm {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.7);
-            justify-content: center;
-            align-items: center;
-        }
-        .popup-content {
-            background: #111;
-            padding: 25px;
-            border-radius: 10px;
-            width: 90%;
-            max-width: 450px;
-            border: 2px solid gold;
-            box-shadow: 0 0 20px gold;
-        }
-        input, select {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            border-radius: 6px;
-            border: 1px solid #555;
-            background: #222;
-            color: #fff;
-        }
-        .close-btn {
-            background: red;
-            padding: 10px;
-            text-align: center;
-            color: #fff;
-            margin-top: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .send-btn {
-            background: gold;
-            padding: 12px;
-            text-align: center;
-            color: #000;
-            margin-top: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paket Iklan Meta Ads — Gold</title>
+  <meta name="description" content="Paket Iklan FB & IG — Starter, Silver, Gold, Platinum. Desain profesional warna gold. " />
+  <style>
+    :root{
+      --bg:#0b1320;
+      --card:#07101a;
+      --muted:#cbd5e1;
+      --gold:#d4af37;
+      --gold-2:#b58f2a;
+      --accent:#ffd980;
+      --glass: rgba(255,255,255,0.04);
+      --success:#16a34a;
+      --danger:#ef4444;
+      --max-width:1100px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background: linear-gradient(180deg,#041026 0%, #071427 60%);color:var(--muted)}
+    .container{max-width:var(--max-width);margin:40px auto;padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--gold),var(--gold-2));display:flex;align-items:center;justify-content:center;color:#07101a;font-weight:700;font-size:18px;box-shadow:0 6px 18px rgba(212,175,55,0.18)}
+    h1{margin:0;font-size:20px;color:#fff}
+    p.lead{margin:0;color:#dbeafe;opacity:0.9}
+
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    @media (max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:520px){.grid{grid-template-columns:1fr}}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:14px;padding:18px;border:1px solid rgba(255,255,255,0.04);box-shadow:0 8px 30px rgba(2,6,23,0.6);position:relative;overflow:hidden}
+    .card .title{display:flex;align-items:center;justify-content:space-between}
+    .card h3{margin:0;color:var(--gold)}
+    .price{font-size:18px;font-weight:700;color:#fff;margin-top:10px}
+    .meta{font-size:13px;color:#b8c3d8;margin-top:8px}
+    .btn{display:inline-block;margin-top:14px;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--gold),var(--gold-2));color:#07101a;font-weight:700;text-decoration:none;border:none;cursor:pointer;box-shadow:0 8px 30px rgba(181,143,42,0.14)}
+    .btn.secondary{background:transparent;color:var(--gold);border:1px solid rgba(212,175,55,0.16)}
+
+    .features{margin-top:12px;font-size:13px;line-height:1.5;color:#cbd5e1}
+    .footnote{margin-top:16px;font-size:13px;color:#9fb1cc}
+
+    /* Modal */
+    .modal-backdrop{position:fixed;inset:0;background:rgba(2,6,23,0.6);display:none;align-items:center;justify-content:center;padding:20px;z-index:9999}
+    .modal{width:100%;max-width:720px;background:linear-gradient(180deg,#07101a,#041026);border-radius:12px;padding:20px;border:1px solid rgba(212,175,55,0.08);box-shadow:0 10px 40px rgba(2,6,23,0.8);}
+    .modal header{display:flex;align-items:center;justify-content:space-between}
+    .modal h2{margin:0;color:var(--gold)}
+    .close{background:transparent;border:0;color:var(--muted);font-weight:700;cursor:pointer}
+    form{margin-top:12px}
+    label{display:block;font-size:13px;color:#cbd5e1;margin-bottom:6px}
+    input[type=text], select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:var(--glass);color:var(--muted);outline:none}
+    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media (max-width:520px){.row{grid-template-columns:1fr}}
+    .summary{background:linear-gradient(90deg, rgba(212,175,55,0.06), rgba(212,175,55,0.02));padding:12px;border-radius:10px;margin-top:10px;border:1px solid rgba(212,175,55,0.06)}
+    .summary p{margin:6px 0;color:#fff}
+    .pay-note{font-size:13px;color:#ffdca6}
+    .order-btn{display:inline-block;margin-top:12px;padding:12px 16px;border-radius:10px;background:var(--gold);color:#07101a;font-weight:800;border:0;cursor:pointer}
+
+    footer{margin-top:30px;padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));display:flex;justify-content:space-between;align-items:center}
+    .bank{font-weight:700;color:var(--gold)}
+
+    /* small label */
+    .pill{display:inline-block;padding:6px 10px;border-radius:30px;background:rgba(255,255,255,0.03);font-size:13px;color:#fff}
+
+    .note{font-size:13px;color:#9fb1cc}
+  </style>
 </head>
-<body><header>
-    <h1>Paket Iklan FB & IG - Gold Edition</h1>
-</header><section class="packages" id="packages">
-    <div class="package-box">
-        <div class="package-title">Paket Starter</div>
-        <p>Budget: 20.000/hari × 2 hari<br>Biaya Jasa: 16.000</p>
-        <a href="#" class="btn-pesan" onclick="openForm('Paket Starter', 20000*2 + 16000)">Pesan</a>
-    </div><div class="package-box">
-    <div class="package-title">Paket Silver</div>
-    <p>Budget: 20.000/hari × 5 hari<br>Biaya Jasa: 50.000</p>
-    <a href="#" class="btn-pesan" onclick="openForm('Paket Silver', 20000*5 + 50000)">Pesan</a>
-</div>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">ADS</div>
+        <div>
+          <h1>Paket Iklan Meta Ads — Gold</h1>
+          <p class="lead">Pilih paket, klik "Pesan" — isi form singkat, dan kirim pesanan ke WhatsApp.</p>
+        </div>
+      </div>
+      <div class="pill">Customer Service: +62 896-8217-9917</div>
+    </header>
 
-<div class="package-box">
-    <div class="package-title">Paket Gold</div>
-    <p>Budget: 50.000/hari × 10 hari<br>Biaya Jasa: 150.000</p>
-    <a href="#" class="btn-pesan" onclick="openForm('Paket Gold', 50000*10 + 150000)">Pesan</a>
-</div>
+    <main>
+      <div class="grid">
+        <!-- Starter -->
+        <div class="card">
+          <div class="title">
+            <h3>Paket Starter</h3>
+            <div class="meta">Testing & Chat</div>
+          </div>
+          <div class="price">Rp20.000 / hari × 2 hari</div>
+          <div class="meta">Biaya jasa: Rp16.000</div>
+          <div class="features">
+            <ul>
+              <li>Peruntukan: Testing awal, memperbanyak chat ringan.</li>
+              <li>Cocok untuk UMKM & promosi singkat.</li>
+            </ul>
+          </div>
+          <button class="btn" data-package='{"name":"Starter","daily":20000,"days":2,"fee":16000}'>Pesan</button>
+        </div>
 
-<div class="package-box">
-    <div class="package-title">Paket Platinum</div>
-    <p>Budget: 85.000/hari × 30 hari<br>Biaya Jasa: 1.500.000</p>
-    <a href="#" class="btn-pesan" onclick="openForm('Paket Platinum', 85000*30 + 1500000)">Pesan</a>
-</div>
+        <!-- Silver -->
+        <div class="card">
+          <div class="title">
+            <h3>Paket Silver</h3>
+            <div class="meta">Awareness & Chat</div>
+          </div>
+          <div class="price">Rp20.000 / hari × 5 hari</div>
+          <div class="meta">Biaya jasa: Rp50.000</div>
+          <div class="features">
+            <ul>
+              <li>Membangun aliran chat harian & jangkauan stabil.</li>
+              <li>Cocok untuk UMKM yang ingin konsisten selama 5 hari.</li>
+            </ul>
+          </div>
+          <button class="btn" data-package='{"name":"Silver","daily":20000,"days":5,"fee":50000}'>Pesan</button>
+        </div>
 
-</section><!-- TESTIMONI --><section class="testimonials" id="testimonials">
-    <h2>Testimoni Klien</h2>
-    <p>Berikut sebagian testimoni real dari 15–20 klien yang telah menggunakan layanan kami:</p><ul>
-  <li>"Chat masuk banyak, jualan makin rame!" – Andi</li>
-  <li>"Iklan tertarget, hasil memuaskan." – Rina</li>
-  <li>"Awareness toko naik jauh, terima kasih!" – Bimo</li>
-  <li>"Dalam 2 hari sudah dapat 6 calon buyer." – Dinda</li>
-  <li>"Budget kecil tapi hasilnya mantap." – Edo</li>
-  <li>"Pengelolaan rapi, laporan jelas." – Fajar</li>
-  <li>"Penjualan stabil tiap hari." – Vina</li>
-  <li>"Iklan aman, bebas banned." – Haris</li>
-  <li>"Target akurat, banyak chat masuk." – Aulia</li>
-  <li>"Cocok untuk UMKM!" – Sari</li>
-  <li>"Admin responsif dan profesional." – Rama</li>
-  <li>"Omset naik minggu ini." – Deni</li>
-  <li>"Paket murah tapi powerful." – Rizky</li>
-  <li>"Desain iklan bagus dibantu." – Melda</li>
-  <li>"Orderan masuk terus tiap hari." – Johan</li>
-  <li>"Recommended banget!" – Sarah</li>
-  <li>"Hasil maksimal & cepat." – Aldi</li>
-  <li>"Paling bagus dibanding tempat lain." – Putra</li>
-  <li>"Iklan makin matang setelah optimasi." – Lia</li>
-  <li>"Banyak pelanggan baru!" – Maya</li>
-</ul>
+        <!-- Gold -->
+        <div class="card">
+          <div class="title">
+            <h3>Paket Gold</h3>
+            <div class="meta">Penjualan & Retarget</div>
+          </div>
+          <div class="price">Rp50.000 / hari × 10 hari</div>
+          <div class="meta">Biaya jasa: Rp150.000</div>
+          <div class="features">
+            <ul>
+              <li>Fokus menghasilkan penjualan & chat stabil.</li>
+              <li>Cocok untuk toko online & promo produk.</li>
+            </ul>
+          </div>
+          <button class="btn" data-package='{"name":"Gold","daily":50000,"days":10,"fee":150000}'>Pesan</button>
+        </div>
 
-<p style="margin-top: 20px;">Lihat testimoni lengkap di album Facebook:<br>
-    <a href="#" onclick="window.open('https://www.facebook.com/share/p/1CcnFJAVUd/', '_blank');" style="color: gold; text-decoration: underline;">Klik di sini untuk melihat semua testimoni</a>
-</p>
+        <!-- Platinum -->
+        <div class="card">
+          <div class="title">
+            <h3>Paket Platinum</h3>
+            <div class="meta">Brand & Scale</div>
+          </div>
+          <div class="price">Rp85.000 / hari × 30 hari</div>
+          <div class="meta">Biaya jasa: Rp1.500.000</div>
+          <div class="features">
+            <ul>
+              <li>Penjualan stabil, retargeting & membangun brand kuat.</li>
+              <li>Cocok untuk bisnis yang siap scale.</li>
+            </ul>
+          </div>
+          <button class="btn" data-package='{"name":"Platinum","daily":85000,"days":30,"fee":1500000}'>Pesan</button>
+        </div>
+      </div>
 
-</section><!-- POPUP FORM --><div id="popupForm">
-    <div class="popup-content">
-        <h2 style="color: gold;">Form Pemesanan</h2>
-        <form id="orderForm">
-            <input type="text" id="nama" placeholder="Nama" required>
-            <input type="text" id="lokasi" placeholder="Lokasi Target Iklan" required>
-            <input type="text" id="jenis" readonly>
-            <input type="text" id="wa" placeholder="Nomor WhatsApp / URL Web" required>
-            <input type="text" id="total" readonly>
-            <p>Metode Bayar:<br>BANK BCA 5965093068 A/N FERI PRADANA</p>
-            <input type="text" id="totalfix" readonly>
-        </form>
-        <div class="send-btn" onclick="sendWA()">Kirim Pesanan</div>
-        <div class="close-btn" onclick="closeForm()">Tutup</div>
+      <footer>
+        <div>
+          <div class="bank">Bank BCA • 5965093068 • FERI PRADANA</div>
+          <div class="note">Transfer sesuai total (termasuk 3 digit otomatis). Setelah transfer, kirim bukti ke WhatsApp.</div>
+        </div>
+        <div class="note">Butuh bantuan? Chat: +62 896-8217-9917</div>
+      </footer>
+    </main>
+  </div>
+
+  <!-- Modal -->
+  <div id="modalBack" class="modal-backdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <header>
+        <h2 id="modalTitle">Form Order</h2>
+        <button class="close" id="closeModal">✕</button>
+      </header>
+      <form id="orderForm">
+        <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;margin-top:8px">
+          <div style="flex:1">
+            <label>Nama</label>
+            <input type="text" id="name" required placeholder="Nama lengkap" />
+          </div>
+          <div style="width:160px">
+            <label>Jenis Paket</label>
+            <select id="packageSelect" required></select>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top:12px">
+          <div>
+            <label>Lokasi Target Iklan</label>
+            <input type="text" id="location" placeholder="Contoh: Kota Surabaya / Radius 20km" required />
+          </div>
+          <div>
+            <label>Nomor WhatsApp / URL Web</label>
+            <input type="text" id="contact" placeholder="0812xxxx atau https://..." required />
+          </div>
+        </div>
+
+        <div class="summary" id="summaryBox">
+          <p><strong>Rincian:</strong></p>
+          <p id="calcDaily">—</p>
+          <p id="calcFee">—</p>
+          <p id="calcTotal">—</p>
+          <p class="pay-note">TOTAL HARUS DI TRANSFER: <span id="grandTotal">Rp0</span> (termasuk 3 digit unik otomatis)</p>
+          <p style="font-size:13px;color:#a9bfd6">Metode bayar: <strong>Bank BCA 5965093068 (FERI PRADANA)</strong></p>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center;margin-top:12px;flex-wrap:wrap">
+          <button type="button" class="order-btn" id="sendOrder">Kirim Pesanan ke WhatsApp</button>
+          <div style="font-size:13px;color:#9fb1cc">Setelah klik, Anda akan diarahkan ke WhatsApp untuk mengirim pesanan.</div>
+        </div>
+
+      </form>
     </div>
-</div><script>
-    function openForm(jenis, totalHarga) {
-        document.getElementById('popupForm').style.display = 'flex';
-        document.getElementById('jenis').value = jenis;
-        document.getElementById('total').value = 'Rp ' + totalHarga.toLocaleString();
+  </div>
 
-        let random3 = Math.floor(100 + Math.random() * 900);
-        let finalTotal = totalHarga + random3;
+  <script>
+    // package data pulled from buttons
+    const buttons = document.querySelectorAll('.btn[data-package]');
+    const modal = document.getElementById('modalBack');
+    const closeModal = document.getElementById('closeModal');
+    const packageSelect = document.getElementById('packageSelect');
+    const calcDaily = document.getElementById('calcDaily');
+    const calcFee = document.getElementById('calcFee');
+    const calcTotal = document.getElementById('calcTotal');
+    const grandTotalEl = document.getElementById('grandTotal');
+    const sendOrder = document.getElementById('sendOrder');
 
-        document.getElementById('totalfix').value = 'Rp ' + finalTotal.toLocaleString();
+    let packages = [];
+
+    buttons.forEach(b=>{
+      const p = JSON.parse(b.getAttribute('data-package'));
+      packages.push(p);
+    });
+
+    // remove duplicates by name
+    packages = packages.reduce((acc,p)=>{ if(!acc.find(x=>x.name===p.name)) acc.push(p); return acc; },[]);
+
+    function formatRp(n){
+      if(!isFinite(n)) return 'Rp0';
+      return 'Rp' + n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     }
 
-    function closeForm() {
-        document.getElementById('popupForm').style.display = 'none';
+    // populate select
+    function populateSelect(){
+      packageSelect.innerHTML = '';
+      packages.forEach((p,idx)=>{
+        const opt = document.createElement('option');
+        opt.value = idx;
+        opt.textContent = p.name + ' — ' + formatRp(p.daily) + ' x ' + p.days + ' hari';
+        packageSelect.appendChild(opt);
+      });
+    }
+    populateSelect();
+
+    function calc(){
+      const p = packages[packageSelect.value];
+      const budget = p.daily * p.days;
+      const fee = p.fee;
+      const base = budget + fee; // integer
+      // generate 3 digit unique code
+      const random3 = Math.floor(Math.random()*900)+100; // 100-999
+      const grand = Number(String(base) + String(random3));
+      calcDaily.textContent = `Budget iklan: ${formatRp(p.daily)} × ${p.days} hari = ${formatRp(budget)}`;
+      calcFee.textContent = `Biaya jasa: ${formatRp(fee)}`;
+      calcTotal.textContent = `Subtotal (budget + jasa) = ${formatRp(base)} — kode unik: ${random3}`;
+      grandTotalEl.textContent = formatRp(grand);
+      // store to element dataset for use on send
+      grandTotalEl.dataset.amount = grand;
+      grandTotalEl.dataset.code = random3;
+      grandTotalEl.dataset.subtotal = base;
     }
 
-    function sendWA() {
-        let nama = document.getElementById('nama').value;
-        let lokasi = document.getElementById('lokasi').value;
-        let jenis = document.getElementById('jenis').value;
-        let wa = document.getElementById('wa').value;
-        let totalfix = document.getElementById('totalfix').value;
+    // open modal handler
+    buttons.forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const payload = JSON.parse(btn.getAttribute('data-package'));
+        const idx = packages.findIndex(x=>x.name===payload.name);
+        packageSelect.value = idx;
+        // immediately calc
+        calc();
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden','false');
+      });
+    });
 
-        let pesan = `Halo Admin, saya ingin pesan:\nNama: ${nama}\nLokasi: ${lokasi}\nPaket: ${jenis}\nKontak/Web: ${wa}\nTotal Transfer: ${totalfix}`;
+    closeModal.addEventListener('click',()=>{ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); });
+    modal.addEventListener('click',(e)=>{ if(e.target === modal){ modal.style.display='none'; modal.setAttribute('aria-hidden','true'); } });
 
-        window.open("https://wa.me/6289682179917?text=" + encodeURIComponent(pesan), "_blank");
-    }
-</script><footer>
-    © 2025 Layanan Iklan FB & IG - All Rights Reserved
-</footer></body>
+    packageSelect.addEventListener('change',calc);
+
+    // Send to WhatsApp
+    sendOrder.addEventListener('click',()=>{
+      const name = document.getElementById('name').value.trim();
+      const location = document.getElementById('location').value.trim();
+      const contact = document.getElementById('contact').value.trim();
+      if(!name || !location || !contact){ alert('Lengkapi semua field sebelum mengirim pesanan.'); return; }
+      const p = packages[packageSelect.value];
+      const subtotal = grandTotalEl.dataset.subtotal || '';
+      const code = grandTotalEl.dataset.code || '';
+      const grand = grandTotalEl.dataset.amount || '';
+
+      const message = `Pesanan%20Paket%20Iklan%0ANama%3A%20${encodeURIComponent(name)}%0ALokasi%20Target%20Iklan%3A%20${encodeURIComponent(location)}%0AJenis%20Paket%3A%20${encodeURIComponent(p.name)}%20(%20${formatRp(p.daily)}%20x%20${p.days}%20hari%20)%0ANomor%20Whatsapp%20%2F%20URL%20Web%3A%20${encodeURIComponent(contact)}%0ASubtotal%20(budget%20+%20jasa)%3A%20${encodeURIComponent(formatRp(Number(subtotal)))}%0AKode%20unik%3A%20${encodeURIComponent(code)}%0ATotal%20HARUS%20DI%20TRANSFER%3A%20${encodeURIComponent(formatRp(Number(grand)))}%0A%0AMetode%20Bayar%3A%20Bank%20BCA%20%2F%20No.%206%-2C965093068%20%2F%20FERI%20PRADANA`;
+
+      // open whatsapp web or app
+      const waNumber = '6289682179917';
+      const waUrl = `https://wa.me/${waNumber}?text=${message}`;
+      window.open(waUrl,'_blank');
+    });
+
+    // initial calc
+    calc();
+  </script>
+</body>
 </html>
