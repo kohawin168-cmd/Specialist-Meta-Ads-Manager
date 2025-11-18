@@ -194,5 +194,87 @@ footer{margin-top:26px;color:var(--muted);font-size:13px;text-align:center}
 </footer>
 
   </div>
-</body>
+  <!-- Popup Order Form -->
+  <div id="orderPopup" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.55);backdrop-filter:blur(3px);justify-content:center;align-items:center;z-index:9999;">
+    <div style="background:white;padding:22px;border-radius:16px;width:90%;max-width:420px;box-shadow:0 12px 40px rgba(0,0,0,0.2);position:relative;">
+      <h3 style="margin-top:0;text-align:center;color:#0b63d6">Form Pemesanan</h3><label>Nama :</label>
+  <input id="f_nama" type="text" style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1" />
+
+  <label>Alamat :</label>
+  <input id="f_alamat" type="text" style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1" />
+
+  <label>Nomor WA :</label>
+  <input id="f_wa" type="text" style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1" />
+
+  <label>Jenis Paket :</label>
+  <select id="f_paket" style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1">
+    <option value="Silver">Paket Silver (Rp150.000)</option>
+    <option value="Gold">Paket Gold (Rp800.000)</option>
+    <option value="Platinum">Paket Platinum (Rp4.050.000)</option>
+  </select>
+
+  <label>Total Pembayaran (otomatis + kode unik):</label>
+  <input id="f_total" type="text" readonly style="width:100%;padding:10px;margin-top:6px;margin-bottom:12px;border-radius:8px;border:1px solid #cbd5e1;background:#f1f5f9;font-weight:700" />
+
+  <label>Metode Bayar :</label>
+  <div style="background:#fffbe6;border:1px solid #e5dd9c;padding:12px;border-radius:8px;margin-top:6px;margin-bottom:14px;font-weight:700">
+    BANK BCA — 5965093068 (Feri Pradana)
+  </div>
+
+  <button onclick="kirimWA()" style="width:100%;padding:12px;background:#0b63d6;color:white;border:none;border-radius:10px;font-weight:700;font-size:16px">Kirim Pesanan via WhatsApp</button>
+
+  <button onclick="closePopup()" style="margin-top:10px;width:100%;padding:10px;background:#e2e8f0;border:none;border-radius:10px;font-weight:700">Tutup</button>
+</div>
+
+  </div>  <script>
+    // Buka popup
+    document.querySelectorAll('.btn').forEach(btn => {
+      btn.addEventListener('click', function(e){
+        if(this.textContent.includes('Pesan')){
+          e.preventDefault();
+          openPopup();
+        }
+      });
+    });
+
+    function openPopup(){
+      document.getElementById('orderPopup').style.display = 'flex';
+      generateTotal();
+    }
+    function closePopup(){
+      document.getElementById('orderPopup').style.display = 'none';
+    }
+
+    function generateTotal(){
+      const paket = document.getElementById('f_paket').value;
+      let base = 0;
+      if(paket === 'Silver') base = 150000;
+      if(paket === 'Gold') base = 800000;
+      if(paket === 'Platinum') base = 4050000;
+
+      const kode = Math.floor(100 + Math.random()*900); // 3 digit unik
+      const total = base + kode;
+      document.getElementById('f_total').value = total;
+    }
+
+    document.getElementById('f_paket').addEventListener('change', generateTotal);
+
+    function kirimWA(){
+      const nama = document.getElementById('f_nama').value;
+      const alamat = document.getElementById('f_alamat').value;
+      const wa = document.getElementById('f_wa').value;
+      const paket = document.getElementById('f_paket').value;
+      const total = document.getElementById('f_total').value;
+
+      const msg = `Halo, saya mau memesan paket iklan.%0A%0A` +
+        `Nama: ${nama}%0A` +
+        `Alamat: ${alamat}%0A` +
+        `Nomor WA: ${wa}%0A` +
+        `Paket: ${paket}%0A` +
+        `Total Pembayaran: Rp${total}%0A%0A` +
+        `Metode Bayar: BANK BCA 5965093068 a.n Feri Pradana`;
+
+      window.open(`https://wa.me/6289531332329?text=${msg}`, '_blank');
+    }
+  </script></body>
 </html>
