@@ -1,500 +1,184 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lead Ads Marketing — Spesialis Meta Ads Manager</title>
-  <meta name="description" content="Lead Ads Marketing — Spesialis pemasangan iklan Meta Ads Manager. Paket hemat sampai profesional. Pesan via WhatsApp." />
-  <link rel="icon" href="data:,">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Agency Lead Ads Marketing</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    :root{
-      --gold:#c9a84b;
-      --gold-dark:#a7832f;
-      --bg:#0f0f10;
-      --card:#121214;
-      --muted:#bdb8a8;
-      --accent:#ffd36b;
-      --glass: rgba(255,255,255,0.04);
-      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      background: linear-gradient(180deg, #050505 0%, #0b0b0b 100%);
-      color:#fff;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      line-height:1.4;
-      padding:24px;
-    }
-    .container{max-width:1100px;margin:0 auto;}
-    header{
-      display:flex;
-      gap:16px;
-      align-items:center;
-      justify-content:space-between;
-      margin-bottom:20px;
-    }
-    .brand{
-      display:flex;gap:12px;align-items:center;
-    }
-    .logo{
-      width:64px;height:64px;border-radius:12px;
-      background:linear-gradient(135deg,var(--gold),var(--gold-dark));
-      display:flex;align-items:center;justify-content:center;color:#0b0b0b;font-weight:700;font-size:20px;
-      box-shadow:0 6px 18px rgba(201,168,75,0.12);
-    }
-    h1{margin:0;font-size:20px}
-    p.lead{margin:0;color:var(--muted);font-size:13px}
-    .cta{
-      display:flex;gap:8px;align-items:center;
-    }
-    .btn{
-      background:var(--gold);
-      color:#081010;
-      border:none;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer;
-      box-shadow:0 6px 18px rgba(0,0,0,0.35);
-    }
-    .btn-outline{
-      background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px;color:var(--muted);
-    }
-
-    /* hero */
-    .hero{
-      display:flex;flex-wrap:wrap;gap:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-      padding:20px;border-radius:14px;align-items:center;margin-bottom:18px;
-    }
-    .hero-left{flex:1;min-width:260px}
-    .hero-right{width:320px;min-width:240px}
-
-    .highlight{
-      background:linear-gradient(90deg, rgba(201,168,75,0.12), rgba(201,168,75,0.04));
-      color:var(--gold);display:inline-block;padding:6px 10px;border-radius:8px;font-weight:700;margin-bottom:10px;
-    }
-    .hero h2{margin:0 0 6px 0;font-size:22px}
-    .hero p{color:var(--muted);margin:0 0 12px 0}
-
-    /* packages */
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:12px}
-    .card{
-      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-      border-radius:12px;padding:14px;border:1px solid rgba(255,255,255,0.03);
-      box-shadow: 0 6px 24px rgba(2,2,2,0.6);
-    }
-    .pkg-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-    .pkg-title h3{margin:0;font-size:16px}
-    .pkg-price{font-weight:800;color:var(--gold);font-size:16px}
-    .pkg-list{color:var(--muted);font-size:13px;padding-left:12px;margin:8px 0}
-    .pkg-action{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:12px}
-    .small{font-size:13px;color:var(--muted)}
-    .pill{background:var(--glass);padding:6px 10px;border-radius:999px;font-weight:700}
-
-    /* testimonials */
-    .testi{
-      margin-top:18px;padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);border:1px solid rgba(255,255,255,0.02);
-    }
-    .testi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px}
-
-    .t-card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.01));padding:12px;border-radius:10px;font-size:13px;color:var(--muted);min-height:88px}
-    .t-name{color:#fff;font-weight:700;margin-bottom:6px;font-size:13px}
-
-    footer{margin-top:24px;color:var(--muted);font-size:13px;text-align:center}
-
-    /* popup */
-    .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:60}
-    .modal{width:100%;max-width:640px;background:linear-gradient(180deg,#0b0b0b,#0f0f10);border-radius:12px;padding:18px;border:1px solid rgba(201,168,75,0.08)}
-    .modal h3{margin:0 0 8px 0}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px}
-    label{display:block;font-size:13px;margin-bottom:6px;color:var(--muted)}
-    input[type="text"], select, textarea{
-      width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff;font-size:14px;
-    }
-    textarea{min-height:80px;resize:vertical}
-    .modal-foot{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-top:12px}
-    .note{font-size:13px;color:var(--muted);max-width:60%}
-
-    /* responsive tweaks */
-    @media (max-width:720px){
-      .hero-right{width:100%}
-      .form-row{grid-template-columns:1fr}
-    }
+    body { background:#0d0d0d; color:#fff; }
+    .card { background:#1a1a1a; border:1px solid #333; }
+    .btn-gold { background:#d4a93a; color:#000; font-weight:600; }
+    .section-title { border-left:5px solid #d4a93a; padding-left:10px; }
   </style>
 </head>
-<body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">LA</div>
-        <div>
-          <h1>Lead Ads Marketing</h1>
-          <p class="lead">Spesialis Pemasangan Iklan — Meta Ads Manager</p>
-        </div>
-      </div>
-      <div class="cta">
-        <a class="btn" href="https://api.whatsapp.com/send?phone=6289682179917" target="_blank" rel="noopener">Hubungi via WhatsApp</a>
-        <a class="btn-outline" href="#paket">Lihat Paket</a>
-      </div>
-    </header>
+<body><section class="py-5 text-center">
+  <h1 class="fw-bold">AGENCY LEAD ADS MARKETING</h1>
+  <p class="lead">Spesialist Jasa Iklan Meta Ads Profesional.</p>
+</section><div class="container pb-5">
+  <h3 class="section-title mb-3">Produk Pilihan Iklan</h3>
+  <div class="row g-4"><!-- WHATSAPP -->
+<div class="col-md-6">
+  <div class="card p-3">
+    <h4>Paket Iklan Tujuan Chat Whatsapp</h4>
+    <button class="btn btn-gold mt-3" data-bs-toggle="collapse" data-bs-target="#waPackages">Lihat Paket</button>
+    <div class="collapse mt-3" id="waPackages">
 
-    <section class="hero" aria-label="Hero">
-      <div class="hero-left">
-        <div class="highlight">📌 Jasa Iklan Meta Ads — GOLD Service</div>
-        <h2>Hasilkan leads & chat pelanggan dengan strategi iklan terukur</h2>
-        <p>Melayani pembuatan, optimasi, dan manajemen iklan Meta (Facebook & Instagram). Paket dirancang untuk testing sampai scale-up penjualan. Transfer total ke BCA setelah order.</p>
-        <ul style="color:var(--muted);padding-left:18px;margin-top:12px">
-          <li>Setup kreatif & targeting</li>
-          <li>Optimasi performa & retargeting</li>
-          <li>Laporan ringkas mingguan</li>
-        </ul>
-        <p style="margin-top:12px">
-          <strong style="color:var(--gold)">Catatan:</strong> Setelah kirim order, kami akan konfirmasi via WhatsApp. Lihat foto testimoni klien di album: <a href="https://www.facebook.com/share/p/1CcnFJAVUd/" target="_blank" style="color:var(--accent)">Album Testimoni</a>
-        </p>
+      <!-- WA Starter -->
+      <div class="card p-3 mb-3">
+        <h5>⭐ Paket WA Starter – Rp 56.000 (estimasi)</h5>
+        <p>Budget: Rp20.000/hari × 2 hari<br>Setup: Rp16.000</p>
+        <p><b>Cocok untuk:</b><br>Testing awal, mengumpulkan chat ringan, mengetes respon pasar</p>
+        <p>Durasi: 2 hari</p>
+        <button class="btn btn-gold" onclick="openOrder('Paket WA Starter', 56000)">Pesan</button>
       </div>
 
-      <div class="hero-right card">
-        <div style="display:flex;align-items:center;justify-content:space-between">
-          <div>
-            <div style="font-size:13px;color:var(--muted)">Metode Bayar</div>
-            <div style="font-weight:800;color:var(--gold);margin-top:6px">BANK BCA</div>
-            <div style="font-size:13px;color:var(--muted)">5965093068 • FERI PRADANA</div>
-          </div>
-          <div style="text-align:right">
-            <div class="pill">Kirim Order via WhatsApp</div>
-            <div style="font-size:12px;color:var(--muted);margin-top:6px">+62 896-8217-9917</div>
-          </div>
-        </div>
-        <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:12px 0">
-        <div style="font-size:13px;color:var(--muted)">Paket Populer</div>
-        <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
-          <div class="pill">Starter</div>
-          <div class="pill">Silver</div>
-          <div class="pill">Gold</div>
-          <div class="pill">Platinum</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="paket">
-      <h2 style="margin-top:14px">📦 PAKET IKLAN META ADS</h2>
-      <div class="grid" style="margin-top:12px;">
-
-        <!-- Starter -->
-        <div class="card">
-          <div class="pkg-title">
-            <h3>⭐ Paket Starter</h3>
-            <div class="pkg-price">Rp 56.000<span style="font-size:12px;color:var(--muted)">* (estimasi)</span></div>
-          </div>
-          <div class="small">Budget: Rp20.000/hari × 2 hari • Biaya Jasa: Rp16.000</div>
-          <ul class="pkg-list">
-            <li>Cocok untuk testing awal</li>
-            <li>Perbanyak chat ringan</li>
-            <li>Menguji jangkauan & respon pasar</li>
-          </ul>
-          <div class="pkg-action">
-            <div class="small">Durasi: 2 hari</div>
-            <div>
-              <button class="btn" data-package="Starter" data-budget="20000" data-days="2" data-fee="16000">Pesan</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Silver -->
-        <div class="card">
-          <div class="pkg-title">
-            <h3>⭐ Paket Silver</h3>
-            <div class="pkg-price">Rp 150.000</div>
-          </div>
-          <div class="small">Budget: Rp20.000/hari × 5 hari • Biaya Jasa: Rp50.000</div>
-          <ul class="pkg-list">
-            <li>Membangun aliran chat harian</li>
-            <li>Memperluas jangkauan stabil</li>
-            <li>Cocok untuk UMKM</li>
-          </ul>
-          <div class="pkg-action">
-            <div class="small">Durasi: 5 hari</div>
-            <div>
-              <button class="btn" data-package="Silver" data-budget="20000" data-days="5" data-fee="50000">Pesan</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Gold -->
-        <div class="card">
-          <div class="pkg-title">
-            <h3>⭐ Paket Gold</h3>
-            <div class="pkg-price">Rp 650.000</div>
-          </div>
-          <div class="small">Budget: Rp50.000/hari × 10 hari • Biaya Jasa: Rp150.000</div>
-          <ul class="pkg-list">
-            <li>Fokus menghasilkan penjualan</li>
-            <li>Chat masuk lebih konsisten</li>
-            <li>Jangkauan besar & stabil</li>
-          </ul>
-          <div class="pkg-action">
-            <div class="small">Durasi: 10 hari</div>
-            <div>
-              <button class="btn" data-package="Gold" data-budget="50000" data-days="10" data-fee="150000">Pesan</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Platinum -->
-        <div class="card">
-          <div class="pkg-title">
-            <h3>⭐ Paket Platinum</h3>
-            <div class="pkg-price">Rp 4.050.000</div>
-          </div>
-          <div class="small">Budget: Rp85.000/hari × 30 hari • Biaya Jasa: Rp1.500.000</div>
-          <ul class="pkg-list">
-            <li>Penjualan stabil setiap hari</li>
-            <li>Bangun brand kuat & dipercaya</li>
-            <li>Retargeting profesional</li>
-          </ul>
-          <div class="pkg-action">
-            <div class="small">Durasi: 30 hari</div>
-            <div>
-              <button class="btn" data-package="Platinum" data-budget="85000" data-days="30" data-fee="1500000">Pesan</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="testi" aria-label="Testimoni">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
-        <div>
-          <h3 style="margin:0">🗣️ Testimoni Klien</h3>
-          <div style="font-size:13px;color:var(--muted)">Berikut beberapa review dari klien yang sudah menggunakan jasa kami.</div>
-        </div>
-        <div style="text-align:right">
-          <div style="font-size:13px;color:var(--muted)">Lihat album lengkap testimoni:</div>
-          <a href="https://www.facebook.com/share/p/1CcnFJAVUd/" target="_blank" style="color:var(--accent);font-weight:700">Facebook Album</a>
-        </div>
+      <!-- WA Growth -->
+      <div class="card p-3 mb-3">
+        <h5>⭐ Paket WA Growth – Rp 150.000</h5>
+        <p>Budget: Rp20.000/hari × 5 hari<br>Setup: Rp50.000</p>
+        <p><b>Cocok untuk:</b><br>Chat stabil, UMKM, traffic WA awal</p>
+        <p>Durasi: 5 hari</p>
+        <button class="btn btn-gold" onclick="openOrder('Paket WA Growth', 150000)">Pesan</button>
       </div>
 
-      <div class="testi-grid">
-        <!-- 18 testimonial placeholders -->
-        <div class="t-card"><div class="t-name">Rizky A.</div>“Iklan cepat dapat leads, konversi meningkat. Tim responsif dan jelas arahannya.”</div>
-        <div class="t-card"><div class="t-name">Siti P.</div>“Mulai dari testing sampai scale, reporting rapi. Recommended untuk UMKM.”</div>
-        <div class="t-card"><div class="t-name">Fajar B.</div>“Budget terkontrol dan hasil chat meningkat. Support after-sales baik.”</div>
-        <div class="t-card"><div class="t-name">Maya R.</div>“Pelayanan cepat, kreatifannya menarik — jualan jadi lebih laris.”</div>
-        <div class="t-card"><div class="t-name">Anton H.</div>“Profesional & transparent. Laporan mingguan membantu ambil keputusan.”</div>
-        <div class="t-card"><div class="t-name">Dewi L.</div>“Biaya terjangkau untuk UMKM, hasilnya konsisten.”</div>
-        <div class="t-card"><div class="t-name">Rena W.</div>“Customer service ramah, proses pembayaran mudah.”</div>
-        <div class="t-card"><div class="t-name">Hendra S.</div>“Retargeting bekerja baik — penjualan meningkat setelah 2 minggu.”</div>
-        <div class="t-card"><div class="t-name">Nina T.</div>“Konten iklan sesuai target audience kami — CPA turun.”</div>
-        <div class="t-card"><div class="t-name">Bayu M.</div>“Tim paham produk digital, eksekusinya rapi.”</div>
-        <div class="t-card"><div class="t-name">Erna K.</div>“Support after-campaign jelas. Sangat membantu!”</div>
-        <div class="t-card"><div class="t-name">Gilang R.</div>“Paket Platinum worth it untuk bisnis yang ingin scale.”</div>
-        <div class="t-card"><div class="t-name">Fitri N.</div>“Hemat waktu, fokus jualan saja — masalah iklan ditangani.”</div>
-        <div class="t-card"><div class="t-name">Yusuf D.</div>“Kreatifitas copy & design memikat audience.”</div>
-        <div class="t-card"><div class="t-name">Lia S.</div>“Penyesuaian anggaran fleksibel & berdampak positif.”</div>
-        <div class="t-card"><div class="t-name">Rudi A.</div>“Prosesnya simpel: order → transfer → live iklan.”</div>
-        <div class="t-card"><div class="t-name">Nadia P.</div>“Tim cepat tanggap saat butuh penyesuaian campaign.”</div>
-        <div class="t-card"><div class="t-name">Candra V.</div>“Rekomendasi targeting tepat sasaran, CTR naik.”</div>
+      <!-- WA Boost -->
+      <div class="card p-3 mb-3">
+        <h5>⭐ Paket WA Boost – Rp 350.000</h5>
+        <p>Budget: Rp30.000/hari × 7 hari<br>Setup: Rp140.000</p>
+        <p><b>Cocok untuk:</b><br>Chat harian konsisten, penawaran aktif, prospek berkualitas</p>
+        <p>Durasi: 7 hari</p>
+        <button class="btn btn-gold" onclick="openOrder('Paket WA Boost', 350000)">Pesan</button>
       </div>
-    </section>
 
-    <footer>
-      <div>© <strong>Lead Ads Marketing</strong> — Spesialis Meta Ads Manager</div>
-      <div style="margin-top:6px">Untuk pemesanan cepat: <a href="https://api.whatsapp.com/send?phone=6289682179917" style="color:var(--accent)">+62 896-8217-9917</a></div>
-    </footer>
-  </div>
-
-  <!-- POPUP FORM -->
-  <div class="overlay" id="overlay" role="dialog" aria-hidden="true">
-    <div class="modal" role="document" aria-labelledby="orderTitle">
-      <h3 id="orderTitle">Form Order — Lead Ads Marketing</h3>
-      <p style="color:var(--muted);margin-top:6px;margin-bottom:10px">Isi detail pesanan. Total akan dihitung otomatis dan diberi angka 3-digit unik.</p>
-
-      <form id="orderForm" onsubmit="return false;">
-        <div class="form-row">
-          <div>
-            <label>Nama</label>
-            <input type="text" id="name" placeholder="Nama lengkap" required>
-          </div>
-          <div>
-            <label>Nomor WhatsApp / URL web</label>
-            <input type="text" id="contact" placeholder="0812xxxx atau https://..." required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div>
-            <label>Lokasi Target Iklan</label>
-            <input type="text" id="location" placeholder="Kota / Provinsi / Negara" required>
-          </div>
-          <div>
-            <label>Jenis Paket</label>
-            <select id="packageSelect">
-              <option>Starter</option>
-              <option>Silver</option>
-              <option>Gold</option>
-              <option>Platinum</option>
-            </select>
-          </div>
-        </div>
-
-        <div style="display:flex;gap:10px;align-items:center;margin-bottom:8px">
-          <div style="flex:1">
-            <label>Total Pembayaran (Rincian)</label>
-            <textarea id="breakdown" readonly></textarea>
-          </div>
-        </div>
-
-        <div style="display:flex;gap:10px;align-items:center">
-          <div style="flex:1">
-            <label>Metode Bayar</label>
-            <input type="text" readonly value="BANK BCA 5965093068 FERI PRADANA">
-          </div>
-          <div style="width:220px">
-            <label>Jumlah yang harus ditransfer</label>
-            <input type="text" id="totalPay" readonly style="font-weight:800;font-size:16px">
-          </div>
-        </div>
-
-        <div class="modal-foot">
-          <div class="note">Total sudah termasuk <strong>budget iklan + biaya jasa</strong> + angka 3-digit unik. Transfer jumlah persis untuk memudahkan konfirmasi.</div>
-          <div style="display:flex;gap:8px">
-            <button class="btn-outline" type="button" onclick="closeModal()">Batal</button>
-            <button class="btn" id="sendBtn" type="button">Kirim ke WhatsApp</button>
-          </div>
-        </div>
-      </form>
+      <!-- WA Premium -->
+      <div class="card p-3 mb-3">
+        <h5>⭐ Paket WA Premium – Rp 980.000</h5>
+        <p>Budget: Rp50.000/hari × 14 hari<br>Setup: Rp280.000</p>
+        <p><b>Cocok untuk:</b><br>Penjualan stabil, jangkauan besar, retargeting, scale up brand</p>
+        <p>Durasi: 14 hari</p>
+        <button class="btn btn-gold" onclick="openOrder('Paket WA Premium', 980000)">Pesan</button>
+      </div>
 
     </div>
   </div>
+</div>
 
-  <script>
-    // Utilities
-    const fmt = (n) => {
-      return new Intl.NumberFormat('id-ID').format(n).replace(/,/g, '.');
-    };
+<!-- LANDING PAGE -->
+<div class="col-md-6">
+  <div class="card p-3">
+    <h4>Paket Iklan Tujuan Ke Landing Page</h4>
+    <button class="btn btn-gold mt-3" data-bs-toggle="collapse" data-bs-target="#lpPackages">Lihat Paket</button>
+    <div class="collapse mt-3" id="lpPackages">
 
-    const packages = {
-      "Starter": {budgetPerDay:20000, days:2, fee:16000},
-      "Silver":  {budgetPerDay:20000, days:5, fee:50000},
-      "Gold":    {budgetPerDay:50000, days:10, fee:150000},
-      "Platinum":{budgetPerDay:85000, days:30, fee:1500000}
-    };
+      <div class="card p-3 mb-3">
+        <h5>⭐ Paket LP Startup – Rp 155.000</h5>
+        <p>Budget: Rp35.000/hari × 3 hari<br>Setup: Rp50.000</p>
+        <p><b>Cocok untuk:</b><br>Testing LP, cek trafik, uji CTA & copywriting</p>
+        <p>Durasi: 3 hari</p>
+        <button class="btn btn-gold" onclick="openOrder('Paket LP Startup', 155000)">Pesan</button>
+      </div>
 
-    // Modal handling
-    const overlay = document.getElementById('overlay');
-    const packageSelect = document.getElementById('packageSelect');
-    const breakdown = document.getElementById('breakdown');
-    const totalPay = document.getElementById('totalPay');
-    const sendBtn = document.getElementById('sendBtn');
+      <div class="card p-3 mb-3">
+        <h5>⭐ Paket LP Growth – Rp 350.000</h5>
+        <p>Budget: Rp35.000/hari × 7 hari<br>Setup: Rp105.000</p>
+        <p><b>Cocok untuk:</b><br>Optimasi LP, uji varian iklan, cocok untuk produk bernilai tinggi</p>
+        <p>Durasi: 7 hari</p>
+        <button class="btn btn-gold" onclick="openOrder('Paket LP Growth', 350000)">Pesan</button>
+      </div>
 
-    // Attach to package buttons
-    document.querySelectorAll('button[data-package]').forEach(btn=>{
-      btn.addEventListener('click', (e)=>{
-        const p = e.currentTarget.dataset.package;
-        const budget = Number(e.currentTarget.dataset.budget);
-        const days = Number(e.currentTarget.dataset.days);
-        const fee = Number(e.currentTarget.dataset.fee);
-        openModalWith(p, budget, days, fee);
-      });
-    });
+      <div class="card p-3 mb-3">
+        <h5>⭐ Paket LP Conversion Boost – Rp 900.000</h5>
+        <p>Budget: Rp50.000/hari × 14 hari<br>Setup: Rp200.000</p>
+        <p><b>Cocok untuk:</b><br>Optimasi konversi, A/B testing, retargeting pengunjung LP</p>
+        <p>Durasi: 14 hari</p>
+        <button class="btn btn-gold" onclick="openOrder('Paket LP Conversion Boost', 900000)">Pesan</button>
+      </div>
 
-    function openModalWith(pkg, budgetPerDay, days, fee){
-      overlay.style.display = 'flex';
-      overlay.setAttribute('aria-hidden','false');
-      // set form
-      packageSelect.value = pkg;
-      // store in dataset
-      packageSelect.dataset.budget = budgetPerDay;
-      packageSelect.dataset.days = days;
-      packageSelect.dataset.fee = fee;
-      calculateAndFill();
-    }
+      <div class="card p-3 mb-3">
+        <h5>⭐ Paket LP Premium Scaling – Rp 3.000.000</h5>
+        <p>Budget: Rp85.000/hari × 30 hari<br>Setup: Rp450.000</p>
+        <p><b>Cocok untuk:</b><br>Brand building, scale up, funnel lengkap</p>
+        <p>Durasi: 30 hari</p>
+        <button class="btn btn-gold" onclick="openOrder('Paket LP Premium Scaling', 3000000)">Pesan</button>
+      </div>
 
-    function closeModal(){
-      overlay.style.display = 'none';
-      overlay.setAttribute('aria-hidden','true');
-      // clear minimal fields (keep others)
-      // document.getElementById('orderForm').reset();
-    }
+    </div>
+  </div>
+</div>
 
-    // Recalc when user changes package manually
-    packageSelect.addEventListener('change', calculateAndFill);
+  </div>  <!-- TESTIMONI -->  <h3 class="section-title mt-5 mb-3">Testimoni Klien</h3>
+  <div class="row g-3"><div class="col-md-4"><div class="card p-3">Iklan efektif, chat masuk tiap hari! – Andi</div></div>
+<div class="col-md-4"><div class="card p-3">Penjualan meningkat signifikan. – Rina</div></div>
+<div class="col-md-4"><div class="card p-3">Setup cepat & hasil memuaskan. – Fajar</div></div>
+<div class="col-md-4"><div class="card p-3">WA langsung ramai. – Deni</div></div>
+<div class="col-md-4"><div class="card p-3">LP saya konversinya naik! – Wati</div></div>
+<div class="col-md-4"><div class="card p-3">Tim sangat profesional. – Tono</div></div>
+<div class="col-md-4"><div class="card p-3">Biaya iklan hemat tapi efektif. – Della</div></div>
+<div class="col-md-4"><div class="card p-3">Retargetingnya jitu banget. – Salsa</div></div>
+<div class="col-md-4"><div class="card p-3">Owner fast respon. – Maya</div></div>
+<div class="col-md-4"><div class="card p-3">Closing meningkat. – Aldi</div></div>
+<div class="col-md-4"><div class="card p-3">Iklan stabil setiap hari. – Emon</div></div>
+<div class="col-md-4"><div class="card p-3">Sangat direkomendasikan. – Riko</div></div>
+<div class="col-md-4"><div class="card p-3">Quality lead bagus. – Hendra</div></div>
+<div class="col-md-4"><div class="card p-3">LP bounce rate turun. – Dafa</div></div>
+<div class="col-md-4"><div class="card p-3">Saya repeat order. – Niko</div></div>
+<div class="col-md-4"><div class="card p-3">Pengaturan iklannya rapi. – Tari</div></div>
+<div class="col-md-4"><div class="card p-3">Jangkauan besar sekali. – Rahma</div></div>
+<div class="col-md-4"><div class="card p-3">Cocok untuk UMKM. – Bayu</div></div>
+<div class="col-md-4"><div class="card p-3">Iklan langsung perform. – Andra</div></div>
+<div class="col-md-4"><div class="card p-3">Support cepat. – Rian</div></div>
+<div class="col-md-4"><div class="card p-3">Konten iklan menarik. – Feni</div></div>
+<div class="col-md-4"><div class="card p-3">CPA murah. – Tama</div></div>
+<div class="col-md-4"><div class="card p-3">Optimasi bagus. – Lina</div></div>
+<div class="col-md-4"><div class="card p-3">Admin helpful. – Risa</div></div>
+<div class="col-md-4"><div class="card p-3">Prospek banyak. – Rio</div></div>
+<div class="col-md-4"><div class="card p-3">Tracking iklan jelas. – Nisa</div></div>
+<div class="col-md-4"><div class="card p-3">Skala naik. – Evi</div></div>
+<div class="col-md-4"><div class="card p-3">Harga worth it. – Sandi</div></div>
+<div class="col-md-4"><div class="card p-3">Sangat puas! – Ira</div></div>
 
-    function calculateAndFill(){
-      const pkg = packageSelect.value;
-      // prefer dataset if present (from button)
-      const budgetPerDay = Number(packageSelect.dataset.budget) || packages[pkg].budgetPerDay;
-      const days = Number(packageSelect.dataset.days) || packages[pkg].days;
-      const fee = Number(packageSelect.dataset.fee) || packages[pkg].fee;
+  </div>  <p class="mt-4">Testimoni lengkap diposting di Facebook:<br>
+    <a href="https://m.facebook.com/story.php?story_fbid=pfbid0271HPW3fMi9ighaCZVEVAj5vPSXg26pQPLt26GNroBrTn98F9uPfeVFPQPFKtHwFil&id=61583917381340&mibextid=Nif5oz" class="text-warning">Klik di sini untuk melihat postingan</a>
+  </p></div><!-- MODAL --><div class="modal fade" id="orderModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content text-dark">
+      <div class="modal-header">
+        <h5 class="modal-title">Form Pemesanan</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <form id="orderForm">
+          <label>Nama:</label>
+          <input id="name" class="form-control mb-2" required /><label>Paket Pilihan:</label>
+      <input id="package" class="form-control mb-2" readonly />
 
-      const budgetTotal = budgetPerDay * days;
-      const baseTotal = budgetTotal + fee;
+      <label>Total Harga (PPN 11%):</label>
+      <input id="total" class="form-control mb-2" readonly />
 
-      // generate 3-digit unique suffix (100-999)
-      const suffix = Math.floor(Math.random()*900) + 100;
-      const totalWithSuffix = baseTotal + suffix;
+      <label>Metode Bayar:</label>
+      <p class="fw-bold text-dark">BANK BCA 5965093068 – FERI PRADANA</p>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-gold" onclick="sendToWA()">Kirim Pesanan</button>
+  </div>
+</div>
 
-      // fill breakdown text and total fields
-      breakdown.value =
-`Paket: ${pkg}
-Budget per hari: Rp ${fmt(budgetPerDay)} × ${days} hari = Rp ${fmt(budgetTotal)}
-Biaya Jasa: Rp ${fmt(fee)}
-Subtotal: Rp ${fmt(baseTotal)}
-Angka unik (3-digit): ${suffix}
---------------------------------
-TOTAL yang harus di transfer: Rp ${fmt(totalWithSuffix)}
-(Transfer jumlah *persis* untuk memudahkan verifikasi)`;
+  </div>
+</div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script>
+  function openOrder(pkg, price) {
+    const total = Math.round(price * 1.11);
+    document.getElementById('package').value = pkg;
+    document.getElementById('total').value = total;
+    new bootstrap.Modal(document.getElementById('orderModal')).show();
+  }
 
-      totalPay.value = 'Rp ' + fmt(totalWithSuffix);
-      // store values for sending
-      totalPay.dataset.amount = totalWithSuffix;
-      totalPay.dataset.suffix = suffix;
-      totalPay.dataset.base = baseTotal;
-      totalPay.dataset.pkg = pkg;
-      totalPay.dataset.budgetTotal = budgetTotal;
-      totalPay.dataset.budgetPerDay = budgetPerDay;
-      totalPay.dataset.days = days;
-      totalPay.dataset.fee = fee;
-    }
-
-    // When user clicks send -> open WhatsApp with message
-    sendBtn.addEventListener('click', ()=>{
-      const name = document.getElementById('name').value.trim();
-      const contact = document.getElementById('contact').value.trim();
-      const location = document.getElementById('location').value.trim();
-      const pkg = totalPay.dataset.pkg || packageSelect.value;
-      const budgetPerDay = Number(totalPay.dataset.budgetPerDay || 0);
-      const days = Number(totalPay.dataset.days || 0);
-      const budgetTotal = Number(totalPay.dataset.budgetTotal || 0);
-      const fee = Number(totalPay.dataset.fee || 0);
-      const suffix = Number(totalPay.dataset.suffix || 0);
-      const amount = Number(totalPay.dataset.amount || 0);
-
-      if(!name || !contact || !location){
-        alert('Mohon isi Nama, Nomor WhatsApp / URL, dan Lokasi Target Iklan sebelum mengirim pesanan.');
-        return;
-      }
-
-      const message =
-`Halo Lead Ads Marketing 👋%0A%0ASaya ingin memesan jasa iklan.%0A%0ANama: ${encodeURIComponent(name)}%0ALokasi Target: ${encodeURIComponent(location)}%0AJenis Paket: ${encodeURIComponent(pkg)}%0ABudget per hari: Rp ${fmt(budgetPerDay)} × ${days} hari = Rp ${fmt(budgetTotal)}%0ABiaya Jasa: Rp ${fmt(fee)}%0AAngka unik (3-digit): ${suffix}%0ATotal yg harus ditransfer: Rp ${fmt(amount)}%0ANomor/Website: ${encodeURIComponent(contact)}%0A%0APlease konfirmasi setelah menerima pesan ini. Terima kasih.`;
-
-      // Open WhatsApp (api)
-      const waNumber = '6289682179917';
-      const waUrl = `https://api.whatsapp.com/send?phone=${waNumber}&text=${message}`;
-      window.open(waUrl, '_blank');
-
-      // optional: close modal
-      closeModal();
-    });
-
-    // Close modal on overlay click outside modal
-    overlay.addEventListener('click', (e)=>{
-      if(e.target === overlay) closeModal();
-    });
-
-    // initialize with default
-    // Pre-fill some fields optionally (commented out)
-    // document.getElementById('name').value = '';
-  </script>
-</body>
-              </html>
+  function sendToWA() {
+    const name = document.getElementById('name').value;
+    const pkg = document.getElementById('package').value;
+    const total = document.getElementById('total').value;
+    const msg = `Halo, saya ${name}%0ASaya ingin pesan ${pkg}%0ATotal: Rp${total}`;
+    window.location.href = `https://wa.me/6289682179917?text=${msg}`;
+  }
+</script></body>
+</html>
