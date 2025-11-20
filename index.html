@@ -5,10 +5,34 @@
   <title>Agency Lead Ads Marketing</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body { background:#0d0d0d; color:#fff; }
-    .card { background:#1a1a1a; border:1px solid #333; }
-    .btn-gold { background:#d4a93a; color:#000; font-weight:600; }
-    .section-title { border-left:5px solid #d4a93a; padding-left:10px; }
+    /* Background & overall */
+    body { background: #0f1724; color: #ffffff; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; }
+    .lead { color: #dbe9ff; }/* Card styles - lighter for readability */
+.card { background: #1f2730; border: 1px solid rgba(255,255,255,0.05); color: #e9eef5; }
+.card p { color: #cbd6e3; }
+.card h5 { color: #fff2d9; }
+
+/* Gold button */
+.btn-gold { background: linear-gradient(180deg,#f1c657,#d4a93a); color: #0b0b0b; font-weight:700; border: none; border-radius: 10px; padding: .5rem 1.25rem; box-shadow: 0 6px 18px rgba(212,169,58,0.18); }
+.btn-gold:focus { box-shadow: 0 0 0 0.25rem rgba(212,169,58,0.18); }
+
+.section-title { border-left:4px solid #d4a93a; padding-left:12px; color: #fff; }
+a.text-warning { color: #ffd966 !important; }
+
+/* Make buttons full width on mobile for easier tap */
+.card .btn { width: 100%; }
+
+/* Modal styles */
+.modal-content { background: #f6f7fb; }
+.modal-content .form-control[readonly] { background: #eef2ff; }
+.modal-title { color: #0b1320; }
+
+/* Responsive spacing */
+@media (max-width: 576px) {
+  .card { padding: 1rem; }
+  .section-title { font-size: 1.15rem; }
+}
+
   </style>
 </head>
 <body><section class="py-5 text-center">
