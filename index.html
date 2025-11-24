@@ -4,376 +4,415 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Lead Digital Marketing - Jasa Iklan Meta Ads</title>
+  <title>Lead Digital Marketing - Meta Ads</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body{background:#0f1724;color:#e6eef8}
-    .card{background:linear-gradient(180deg,#0b1220, #0f1a2a)}
-    .muted {color:#b7c1cb}
-    .testi{background:rgba(255,255,255,0.03);padding:12px;border-radius:8px}
-    .small-note{font-size:.9rem;color:#9fb0c6}
+    :root{--brand-blue:#0b63d6;--brand-dark:#084fa8}
+    html,body{height:100%;background:linear-gradient(180deg,var(--brand-blue),var(--brand-dark));color:#fff}
+    .nav-link, .navbar-brand{color:#fff !important}
+    .card{background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.06)}
+    .btn-outline-light{color:#fff;border-color:rgba(255,255,255,0.2)}
+    .small-muted{color:rgba(255,255,255,0.75)}
+    .testimonial{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;margin-bottom:8px}
+    .sidebar{min-height:calc(100vh - 56px);padding-top:1rem}
+    .form-control:focus{box-shadow:0 0 0 .2rem rgba(255,255,255,0.05);border-color:rgba(255,255,255,0.2)}
+    .required{color:#ffd2d2}
   </style>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Lead Digital Marketing</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+    <a class="navbar-brand fw-bold" href="#">Lead Digital Marketing</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navcollapse">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="nav">
+    <div class="collapse navbar-collapse" id="navcollapse">
       <ul class="navbar-nav ms-auto">
-        <li class="nav-item"><a class="nav-link" href="#dashboard">Dashboard</a></li>
-        <li class="nav-item"><a class="nav-link" href="#kategori">Kategori Iklan</a></li>
-        <li class="nav-item"><a class="nav-link" href="#testimoni">Testimoni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#services">Layanan</a></li>
+        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimoni</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Kontak</a></li>
       </ul>
     </div>
   </div>
 </nav><div class="container py-4">
-  <header class="mb-4">
-    <h1 class="h3">Lead Digital Marketing</h1>
-    <p class="muted">Solusi Menaikan Trafik &amp; penjualan — Tertarget dan Presisi</p>
-  </header>  <!-- Kategori (gambar 2) -->  <section id="kategori" class="mb-5">
-    <h2 class="h5">Kategori Iklan</h2>
-    <div class="row gy-3 mt-2">
-      <div class="col-md-6">
-        <div class="card p-3">
-          <div class="d-flex align-items-center">
-            <div class="flex-grow-1">
-              <h5 class="mb-1">Peningkatan interaksi pada postingan</h5>
-              <p class="muted mb-2">Siapkan cepat kampanye interaksi yang menghasilkan interaksi postingan.</p>
-              <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalInteraksi">Lihat Submenu</button>
-            </div>
-          </div>
-        </div>
-      </div><div class="col-md-6">
-    <div class="card p-3">
-      <div class="d-flex align-items-center">
-        <div class="flex-grow-1">
-          <h5 class="mb-1">Dapatkan interaksi pengiriman pesan</h5>
-          <p class="muted mb-2">Buat cepat kampanye interaksi yang menghasilkan pesan di Messenger, Instagram, atau WhatsApp.</p>
-          <button class="btn btn-sm btn-primary" data-bs-toggle="modal" data-bs-target="#modalInteraksi">Lihat Submenu</button>
-        </div>
-      </div>
+  <div class="row g-4">
+    <div class="col-lg-4">
+      <div class="card p-3 sidebar">
+        <h5 class="mb-1">Solusi Menaikan Trafik & penjualan</h5>
+        <p class="small-muted">Tertarget dan Presisi — Spesialis Meta Ads untuk bisnis Anda</p><hr class="border-white-50">
+    <h6>Unggahan (Menu Gambar 1)</h6>
+    <div class="list-group mt-2">
+      <button class="list-group-item list-group-item-action bg-transparent text-white" data-bs-toggle="modal" data-bs-target="#campaignModal" data-campaign="Awareness">Awareness</button>
+      <button class="list-group-item list-group-item-action bg-transparent text-white" data-bs-toggle="modal" data-bs-target="#campaignModal" data-campaign="Trafick">Trafick</button>
+      <button class="list-group-item list-group-item-action bg-transparent text-white" data-bs-toggle="modal" data-bs-target="#campaignModal" data-campaign="Prospek">Prospek</button>
+      <button class="list-group-item list-group-item-action bg-transparent text-white" data-bs-toggle="modal" data-bs-target="#campaignModal" data-campaign="Penjualan">Penjualan</button>
+      <button class="list-group-item list-group-item-action bg-transparent text-white" data-bs-toggle="modal" data-bs-target="#campaignModal" data-campaign="Promosi Iklan">Promosi Iklan</button>
     </div>
+
+    <hr class="border-white-50">
+    <h6>Gambar 2 — Kategori Interaksi</h6>
+    <div class="list-group mt-2">
+      <button class="list-group-item list-group-item-action bg-transparent text-white" data-bs-toggle="modal" data-bs-target="#interaksiModal">Peningkatan interaksi pada postingan</button>
+    </div>
+
+    <hr class="border-white-50">
+    <h6>Kontak</h6>
+    <p class="small-muted mb-1">WhatsApp Order</p>
+    <a class="btn btn-outline-light btn-sm" href="https://wa.me/6289682179915" target="_blank">Kirim Pesan ke +62 896-8217-9915</a>
+
   </div>
 </div>
 
-  </section>  <!-- Dashboard (gambar 1) -->  <section id="dashboard" class="mb-5">
-    <h2 class="h5">Dashboard - Pilih Tujuan Iklan</h2>
-    <div class="row gy-3 mt-2">
-      <!-- Awareness -->
-      <div class="col-md-4">
+<div class="col-lg-8">
+  <div class="card p-4">
+    <h3 class="fw-bold">Lead Digital Marketing</h3>
+    <p class="lead">Meta Ads — Solusi Menaikan Trafik & Penjualan. Tertarget dan Presisi.</p>
+
+    <div id="services" class="mt-4">
+      <h5>Kenapa pilih kami?</h5>
+      <ul>
+        <li>Optimasi strategi iklan Meta (Facebook & Instagram)</li>
+        <li>Penargetan yang tepat untuk menaikkan ROI</li>
+        <li>Pelaporan dan rekomendasi per-bulan</li>
+      </ul>
+    </div>
+
+    <hr class="border-white-50">
+    <h5 class="mb-3">Layanan cepat</h5>
+    <div class="row g-3">
+      <div class="col-md-6">
         <div class="card p-3">
-          <h6>Awareness</h6>
-          <p class="muted small-note">Tampilkan iklan Anda ke orang yang kemungkinan besar akan mengingatnya. Cocok untuk Jangkauan / Brand awareness.</p>
-          <p class="small-note">Minimal iklan berjalan 5 hari untuk hasil maksimal. Biaya iklan harian: Rp45.000</p>
-          <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalOrderDashboard" data-jenis="Awareness">Pilih</button>
+          <h6>Peningkatan Interaksi</h6>
+          <p class="mb-2 small-muted">Tingkatkan like, komentar, dan pesan masuk untuk postingan Anda.</p>
+          <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#interaksiModal">Pilih Paket Interaksi</button>
         </div>
       </div>
-      <!-- Traffic -->
-      <div class="col-md-4">
+
+      <div class="col-md-6">
         <div class="card p-3">
-          <h6>Traffic</h6>
-          <p class="muted small-note">Arahkan orang ke situs web, aplikasi, atau event. Cocok untuk klik tautan / tayangan halaman tujuan.</p>
-          <p class="small-note">Minimal iklan berjalan 5 hari untuk hasil maksimal. Biaya iklan harian: Rp45.000</p>
-          <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalOrderDashboard" data-jenis="Traffic">Pilih</button>
-        </div>
-      </div>
-      <!-- Prospek -->
-      <div class="col-md-4">
-        <div class="card p-3">
-          <h6>Prospek</h6>
-          <p class="muted small-note">Kumpulkan prospek untuk bisnis atau merek Anda. Cocok untuk Formulir Instan.</p>
-          <p class="small-note">Minimal iklan berjalan 5 hari untuk hasil maksimal. Biaya iklan harian: Rp45.000</p>
-          <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalOrderDashboard" data-jenis="Prospek">Pilih</button>
-        </div>
-      </div>
-      <!-- Penjualan -->
-      <div class="col-md-4">
-        <div class="card p-3">
-          <h6>Penjualan</h6>
-          <p class="muted small-note">Cari orang yang kemungkinan akan membeli produk atau layanan Anda. Cocok untuk Konversi / Penjualan katalog.</p>
-          <p class="small-note">Minimal iklan berjalan 5 hari untuk hasil maksimal. Biaya iklan harian: Rp45.000</p>
-          <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalOrderDashboard" data-jenis="Penjualan">Pilih</button>
-        </div>
-      </div>
-      <!-- Promosi Iklan -->
-      <div class="col-md-4">
-        <div class="card p-3">
-          <h6>Promosi iklan</h6>
-          <p class="muted small-note">Temukan orang baru untuk menginstal aplikasi Anda dan terus menggunakannya. Cocok untuk Penginstalan aplikasi / Peristiwa aplikasi.</p>
-          <p class="small-note">Minimal iklan berjalan 5 hari untuk hasil maksimal. Biaya iklan harian: Rp45.000</p>
-          <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#modalOrderDashboard" data-jenis="Promosi iklan">Pilih</button>
+          <h6>Kampanye Iklan Lengkap</h6>
+          <p class="mb-2 small-muted">Dari awareness sampai penjualan — paket sesuai tujuan bisnis.</p>
+          <button class="btn btn-light btn-sm" data-bs-toggle="modal" data-bs-target="#campaignModal" data-campaign="Awareness">Pilih Paket Kampanye</button>
         </div>
       </div>
     </div>
-  </section>  <!-- Testimoni -->  <section id="testimoni" class="mb-5">
-    <h2 class="h5">Testimoni Pelanggan</h2>
-    <div class="row row-cols-1 row-cols-md-3 g-3 mt-2">
-      <!-- 25 testimoni -->
-      <div class="col">
-        <div class="testi">"Hasilnya cepat, trafik naik 3x dalam 1 minggu." — Rini</div>
+
+    <hr class="border-white-50">
+    <section id="testimonials">
+      <h5>Testimoni Klien</h5>
+      <div class="row">
+        <div class="col-md-6">
+          <!-- 25 Testimoni dibuat di bawah -->
+          <div id="testi-list">
+            <!-- Testimoni 1..25 -->
+            <div class="testimonial">"Lead Digital Marketing membantu meningkatkan penjualan online kami." <br><small class="small-muted">— Sari, Fashion</small></div>
+            <div class="testimonial">"Respons cepat dan hasil yang terlihat dalam 1 minggu." <br><small class="small-muted">— Budi, Toko Elektronik</small></div>
+            <div class="testimonial">"Peningkatan interaksi pada postingan meningkat 3x." <br><small class="small-muted">— Rina, Kuliner</small></div>
+            <div class="testimonial">"Strategi targeting sangat tepat." <br><small class="small-muted">— Anton, Properti</small></div>
+            <div class="testimonial">"Laporan mingguan memudahkan evaluasi." <br><small class="small-muted">— Maya, Kosmetik</small></div>
+            <div class="testimonial">"Biaya terukur dan efektif." <br><small class="small-muted">— Dian, Jasa Laundry</small></div>
+            <div class="testimonial">"Timnya profesional dan komunikatif." <br><small class="small-muted">— Arif, Bengkel</small></div>
+            <div class="testimonial">"Hasil konversi meningkat tajam." <br><small class="small-muted">— Wulan, Kursus</small></div>
+            <div class="testimonial">"Setup cepat dan akurat." <br><small class="small-muted">— Hendra, UMKM</small></div>
+            <div class="testimonial">"Customer service ramah." <br><small class="small-muted">— Sinta, Dekorasi</small></div>
+            <div class="testimonial">"Rekomendasi anggaran sangat membantu." <br><small class="small-muted">— Fajar, Catering</small></div>
+            <div class="testimonial">"Target penjualan tercapai." <br><small class="small-muted">— Lia, Accessories</small></div>
+            <div class="testimonial">"Proses transaksi aman." <br><small class="small-muted">— Oki, Supplier</small></div>
+            <div class="testimonial">"Kreatif dalam pembuatan konten." <br><small class="small-muted">— Tika, Fotografi</small></div>
+            <div class="testimonial">"Hemat biaya dibandingkan agensi lain." <br><small class="small-muted">— Hadi, Travel</small></div>
+            <div class="testimonial">"Targeting lokal sangat efektif." <br><small class="small-muted">— Rudi, Warung</small></div>
+            <div class="testimonial">"Skalabilitas kampanye bagus." <br><small class="small-muted">— Nia, Clinic</small></div>
+            <div class="testimonial">"Pelaporan transparan." <br><small class="small-muted">— Gita, Salon</small></div>
+            <div class="testimonial">"Analitik membantu pengambilan keputusan." <br><small class="small-muted">— Yono, Retail</small></div>
+            <div class="testimonial">"Iklan jadi lebih relevan." <br><small class="small-muted">— Sari, Fashion 2</small></div>
+            <div class="testimonial">"Konversi pesan meningkat." <br><small class="small-muted">— Dwi, Rental</small></div>
+            <div class="testimonial">"Mudah koordinasi dengan tim." <br><small class="small-muted">— Arman, Event</small></div>
+            <div class="testimonial">"ROI lebih baik dari prediksi." <br><small class="small-muted">— Putri, Health</small></div>
+            <div class="testimonial">"Terus memberikan update performa." <br><small class="small-muted">— Joko, Furnitur</small></div>
+          </div>
+        </div>
+        <div class="col-md-6 d-flex flex-column align-items-start">
+          <a class="btn btn-outline-light mb-3" href="https://www.facebook.com/share/p/14PQsosno5E/" target="_blank">Lihat lengkap testimoni</a>
+          <div class="card p-3 w-100">
+            <h6>Hubungi Untuk Konsultasi</h6>
+            <p class="small-muted">Atur strategi iklan Anda sekarang.</p>
+            <a class="btn btn-light" href="https://wa.me/6289682179915?text=Halo%20Lead%20Digital%20Marketing,%20saya%20ingin%20konsultasi%20tentang%20iklan%20Meta." target="_blank">Kirim Pesan</a>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <div class="testi">"Konversi meningkat, recommended." — Ahmad</div>
-      </div>
-      <div class="col">
-        <div class="testi">"Timnya responsif dan profesional." — Sari</div>
-      </div>
-      <div class="col"><div class="testi">"Penjualan toko online naik pesat." — Budi</div></div>
-      <div class="col"><div class="testi">"Iklan tertarget, biaya efektif." — Tika</div></div>
-      <div class="col"><div class="testi">"Support ramah dan membantu." — Dito</div></div>
-      <div class="col"><div class="testi">"ROI terasa dalam 2 minggu." — Maya</div></div>
-      <div class="col"><div class="testi">"Setting iklan rapi, laporan jelas." — Rio</div></div>
-      <div class="col"><div class="testi">"Kontrak fleksibel, mudah beriklan." — Lili</div></div>
-      <div class="col"><div class="testi">"Biaya setup masuk akal." — Hendra</div></div>
-      <div class="col"><div class="testi">"Rekomendasi audience akurat." — Fitri</div></div>
-      <div class="col"><div class="testi">"Jumlah leads meningkat." — Toni</div></div>
-      <div class="col"><div class="testi">"Pelayanan aftersales mantap." — Rika</div></div>
-      <div class="col"><div class="testi">"Kreatif pada materi iklan." — Joko</div></div>
-      <div class="col"><div class="testi">"Laporan mingguan sangat membantu." — Nisa</div></div>
-      <div class="col"><div class="testi">"Hemat anggaran, tetap hasil." — Arman</div></div>
-      <div class="col"><div class="testi">"Konsep campaign oke." — Dena</div></div>
-      <div class="col"><div class="testi">"Bisa target sesuai lokasi." — Rafi</div></div>
-      <div class="col"><div class="testi">"Sangat direkomendasikan untuk UMKM." — Sinta</div></div>
-      <div class="col"><div class="testi">"Tambah pelanggan baru tiap bulan." — Wawan</div></div>
-      <div class="col"><div class="testi">"Proses cepat dan tanpa ribet." — Yulia</div></div>
-      <div class="col"><div class="testi">"Hasilnya konsisten." — Eko</div></div>
-      <div class="col"><div class="testi">"Pelayanan 24 jam saat dibutuhkan." — Dina</div></div>
-      <div class="col"><div class="testi">"Analisisnya tepat sasaran." — Rian</div></div>
-    </div>
-    <div class="mt-3">
-      <a class="btn btn-sm btn-outline-info" href="https://www.facebook.com/share/p/14PQsosno5E/" target="_blank">Lihat lengkap testimoni</a>
-    </div>
-  </section></div><!-- Modal: Interaksi (submenu with two items) --><div class="modal fade" id="modalInteraksi" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content bg-dark text-light">
-      <div class="modal-header">
-        <h5 class="modal-title">Submenu: Interaksi</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+    </section>
+
+  </div>
+</div>
+
+  </div>
+</div><!-- Modal: Interaksi (Gambar 2) --><div class="modal fade" id="interaksiModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Peningkatan Interaksi pada Postingan</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
       <div class="modal-body">
-        <div class="list-group">
-          <button class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#modalOrderInteraksi" data-bs-dismiss="modal" data-paket="Dapatkan Interaksi pada postingan">Dapatkan Interaksi pada postingan</button>
-          <button class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#modalOrderInteraksi" data-bs-dismiss="modal" data-paket="Dapatkan Interaksi pengiriman pesan">Dapatkan Interaksi pengiriman pesan</button>
-        </div>
-        <p class="mt-3 small-note">Keterangan: Minimal iklan dijalankan 3 hari dengan biaya iklan harian Rp20.000 per hari. Biaya Setup Meta Ads: Rp50.000</p>
-      </div>
-    </div>
-  </div>
-</div><!-- Modal: Order Interaksi (3-day min, daily 20k, setup 50k) --><div class="modal fade" id="modalOrderInteraksi" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content bg-dark text-light">
-      <div class="modal-header">
-        <h5 class="modal-title">Order Paket Interaksi</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+        <p>Dua pilihan sub-paket:</p>
+        <div class="list-group mb-3">
+          <button class="list-group-item list-group-item-action" id="subPostBtn">Dapatkan Interaksi pada postingan</button>
+          <button class="list-group-item list-group-item-action" id="subMsgBtn">Dapatkan Interaksi (Pengiriman Pesan)</button>
+        </div><div id="interaksi-desc" class="mb-3 small-muted">Pilih sub-paket untuk melihat detail dan order.</div>
+
+    <div id="interaksi-order" style="display:none">
+      <h6>Form Order - Paket Interaksi</h6>
       <form id="formInteraksi">
-      <div class="modal-body">
         <div class="mb-2">
-          <label class="form-label">Nama</label>
-          <input type="text" class="form-control" name="nama" required>
+          <label class="form-label">Nama :</label>
+          <input type="text" id="namaInteraksi" class="form-control" required>
         </div>
         <div class="mb-2">
-          <label class="form-label">Paket iklan</label>
-          <input type="text" class="form-control" name="paket" readonly>
+          <label class="form-label">Paket iklan :</label>
+          <input type="text" id="paketInteraksi" class="form-control" readonly>
         </div>
         <div class="mb-2">
-          <label class="form-label">Durasi iklan (hari)</label>
-          <input type="number" class="form-control" name="durasi" min="3" value="3" required>
+          <label class="form-label">Durasi iklan (hari) <span class="required">*min 3</span> :</label>
+          <input type="number" id="durasiInteraksi" class="form-control" value="3" min="3" required>
         </div>
         <div class="mb-2">
-          <label class="form-label">Asumsi Biaya</label>
-          <input type="text" class="form-control" name="asumsi" readonly>
+          <label class="form-label">Biaya iklan harian (Rp) :</label>
+          <input type="number" id="dailyInteraksi" class="form-control" value="20000" readonly>
         </div>
         <div class="mb-2">
-          <label class="form-label">Biaya Setup Meta Ads</label>
-          <input type="text" class="form-control" name="setup" readonly value="Rp50.000">
+          <label class="form-label">Asumsi Biaya (Rp) :</label>
+          <input type="text" id="asumsiInteraksi" class="form-control" readonly>
         </div>
         <div class="mb-2">
-          <label class="form-label">Total Biaya</label>
-          <input type="text" class="form-control" name="total" readonly>
+          <label class="form-label">Biaya Setup Meta Ads (Rp) :</label>
+          <input type="text" id="setupInteraksi" class="form-control" value="50000" readonly>
         </div>
         <div class="mb-2">
-          <label class="form-label">Metode Pembayaran</label>
-          <input type="text" class="form-control" readonly value="BCA 5965093068 Feri pradana">
+          <label class="form-label">Total Biaya (Rp) :</label>
+          <input type="text" id="totalInteraksi" class="form-control" readonly>
         </div>
-        <div class="small-note">Setelah submit, formulir akan dikirim via WhatsApp.</div>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-success">Kirim Pesan ke WhatsApp</button>
-      </div>
+        <div class="mb-2">
+          <label class="form-label">Metode Pembayaran :</label>
+          <input type="text" class="form-control" value="BCA 5965093068 Feri pradana" readonly>
+        </div>
+
+        <div class="d-flex gap-2 mt-3">
+          <button type="button" class="btn btn-light" id="sendInteraksi">Kirim Pesan via WhatsApp</button>
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Batal</button>
+        </div>
       </form>
     </div>
+
   </div>
-</div><!-- Modal: Order Dashboard (for Awareness, Traffic, etc) --><div class="modal fade" id="modalOrderDashboard" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content bg-dark text-light">
-      <div class="modal-header">
-        <h5 class="modal-title">Order Paket Iklan</h5>
-        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+  </div>
+</div><!-- Modal: Campaign (Gambar 1 Submenus) --><div class="modal fade" id="campaignModal" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Pilih Jenis Iklan</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
       </div>
-      <form id="formDashboard">
       <div class="modal-body">
+        <p class="small-muted">Minimal iklan berjalan 5 hari untuk hasil maksimal. Biaya iklan harian minimal Rp45.000.</p><div class="list-group mb-3">
+      <button class="list-group-item list-group-item-action" data-camp="Awareness">Awareness - Bangun brand & jangkauan</button>
+      <button class="list-group-item list-group-item-action" data-camp="Trafick">Trafick - Tingkatkan kunjungan ke website/landing</button>
+      <button class="list-group-item list-group-item-action" data-camp="Prospek">Prospek - Kumpulkan leads berkualitas</button>
+      <button class="list-group-item list-group-item-action" data-camp="Penjualan">Penjualan - Dorong transaksi dan pembelian</button>
+      <button class="list-group-item list-group-item-action" data-camp="Promosi Iklan">Promosi Iklan - Diskon & kampanye khusus</button>
+    </div>
+
+    <div id="campaign-order" style="display:none">
+      <h6>Form Order - Kampanye Iklan</h6>
+      <form id="formCampaign">
         <div class="mb-2">
-          <label class="form-label">Nama</label>
-          <input type="text" class="form-control" name="nama" required>
+          <label class="form-label">NAMA :</label>
+          <input type="text" id="namaCampaign" class="form-control" required>
         </div>
         <div class="mb-2">
-          <label class="form-label">Jenis Iklan</label>
-          <input type="text" class="form-control" name="jenis" readonly>
+          <label class="form-label">JENIS IKLAN :</label>
+          <input type="text" id="jenisCampaign" class="form-control" readonly>
         </div>
         <div class="mb-2">
-          <label class="form-label">Biaya Iklan Harian (Rp)</label>
-          <input type="number" class="form-control" name="biaya_harian" min="45000" value="45000" required>
-          <div class="form-text">Set minimal: Rp45.000. Jika diinput kurang, akan error.</div>
+          <label class="form-label">BIAYA IKLAN HARIAN (Rp) <span class="required">*min 45000</span> :</label>
+          <input type="number" id="dailyCampaign" class="form-control" value="45000" min="45000" required>
         </div>
         <div class="mb-2">
-          <label class="form-label">Durasi Tayang (hari)</label>
-          <input type="number" class="form-control" name="durasi" min="5" value="5" required>
-          <div class="form-text">Minimal 5 hari untuk hasil maksimal.</div>
+          <label class="form-label">DURASI TAYANG (hari) <span class="required">*min 5</span> :</label>
+          <input type="number" id="durasiCampaign" class="form-control" value="5" min="5" required>
         </div>
         <div class="mb-2">
-          <label class="form-label">Biaya Setup</label>
-          <input type="text" class="form-control" name="setup" readonly>
-          <div class="form-text">Biaya setup dihitung: Rp75.000 per 5 hari. Jika lebih dari 5 hari, otomatis ada tambahan Rp15.000 per hari.</div>
+          <label class="form-label">BIAYA SETUP (Rp) :</label>
+          <input type="text" id="setupCampaign" class="form-control" readonly>
+          <div class="small-muted mt-1">Biaya setup dasar Rp75.000 per 5 hari. Jika durasi > 5 hari, dikenakan Rp15.000 per hari tambahan.</div>
         </div>
         <div class="mb-2">
-          <label class="form-label">Asumsi Biaya</label>
-          <input type="text" class="form-control" name="asumsi" readonly>
+          <label class="form-label">ASUMSI BIAYA (Rp) :</label>
+          <input type="text" id="asumsiCampaign" class="form-control" readonly>
         </div>
         <div class="mb-2">
-          <label class="form-label">Metode Pembayaran</label>
-          <input type="text" class="form-control" readonly value="BCA 5965093068 Feri pradana">
+          <label class="form-label">Metode Pembayaran :</label>
+          <input type="text" class="form-control" value="BCA 5965093068 Feri pradana" readonly>
         </div>
-        <div class="small-note">Setelah submit, formulir akan diteruskan melalui WhatsApp.</div>
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-success">Kirim Pesan ke WhatsApp</button>
-      </div>
+
+        <div class="d-flex gap-2 mt-3">
+          <button type="button" class="btn btn-light" id="sendCampaign">Kirim Pesan via WhatsApp</button>
+          <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Batal</button>
+        </div>
       </form>
     </div>
+
   </div>
-</div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script>
-  const WA_NUMBER = '6289682179915'; // tujuan pesan
+</div>
 
-  // Helper formatting
-  function formatIDR(n){
-    return 'Rp' + Number(n).toLocaleString('id-ID');
+  </div>
+</div><footer class="text-center mt-4 small-muted pb-4">&copy; 2025 Lead Digital Marketing — Semua hak dilindungi.</footer><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script><script>
+  // Utility: format Rupiah
+  function formatRupiah(num){
+    if(isNaN(num)) num = 0;
+    return 'Rp ' + Number(num).toLocaleString('id-ID');
   }
 
-  // Interaksi modal: set paket name when opened
-  var modalInteraksiEl = document.getElementById('modalOrderInteraksi');
-  modalInteraksiEl.addEventListener('show.bs.modal', function (event) {
-    const trigger = event.relatedTarget; // button that opened
-    const paket = trigger ? trigger.getAttribute('data-paket') : 'Paket Interaksi';
-    const form = document.getElementById('formInteraksi');
-    form.elements['paket'].value = paket;
-    // set defaults
-    form.elements['durasi'].min = 3;
-    form.elements['durasi'].value = 3;
-    recalcInteraksi();
-  });
+  // Interaksi modal logic
+  const subPostBtn = document.getElementById('subPostBtn');
+  const subMsgBtn = document.getElementById('subMsgBtn');
+  const interaksiDesc = document.getElementById('interaksi-desc');
+  const interaksiOrder = document.getElementById('interaksi-order');
+  const paketInteraksi = document.getElementById('paketInteraksi');
+  const durasiInteraksi = document.getElementById('durasiInteraksi');
+  const dailyInteraksi = document.getElementById('dailyInteraksi');
+  const asumsiInteraksi = document.getElementById('asumsiInteraksi');
+  const setupInteraksi = document.getElementById('setupInteraksi');
+  const totalInteraksi = document.getElementById('totalInteraksi');
 
-  function recalcInteraksi(){
-    const form = document.getElementById('formInteraksi');
-    const dur = Number(form.elements['durasi'].value || 0);
-    const min = 3;
-    const biayaHarian = 20000;
-    if(dur < min) {
-      form.elements['asumsi'].value = 'Durasi minimal '+min+' hari';
-      form.elements['total'].value = '';
-      return;
-    }
-    const asumsi = biayaHarian * dur;
-    const setup = 50000;
-    const total = asumsi + setup;
-    form.elements['asumsi'].value = formatIDR(asumsi);
-    form.elements['total'].value = formatIDR(total);
+  function updateInteraksiTotals(){
+    const dur = parseInt(durasiInteraksi.value)||0;
+    const daily = parseInt(dailyInteraksi.value)||0;
+    const asum = daily * dur;
+    asumsiInteraksi.value = formatRupiah(asum);
+    const setup = parseInt(setupInteraksi.value)||0;
+    totalInteraksi.value = formatRupiah(asum + setup);
   }
 
-  document.getElementById('formInteraksi').addEventListener('input', recalcInteraksi);
-
-  document.getElementById('formInteraksi').addEventListener('submit', function(e){
-    e.preventDefault();
-    const f = e.target;
-    const nama = f.elements['nama'].value.trim();
-    const paket = f.elements['paket'].value;
-    const dur = Number(f.elements['durasi'].value);
-    if(!nama || dur < 3){ alert('Isi nama dan pastikan durasi minimal 3 hari'); return; }
-    const biayaHarian = 20000;
-    const asumsi = biayaHarian * dur;
-    const setup = 50000;
-    const total = asumsi + setup;
-    const msg = `Order%20Lead%20Digital%20Marketing%0ANama:%20${encodeURIComponent(nama)}%0APaket:%20${encodeURIComponent(paket)}%0ADurasi:%20${dur}%20hari%0AAsumsi%20Biaya:%20${formatIDR(asumsi)}%0ABiaya%20Setup:%20${formatIDR(setup)}%0ATotal%20Biaya:%20${formatIDR(total)}`;
-    const url = `https://wa.me/${WA_NUMBER}?text=${msg}`;
-    window.open(url, '_blank');
+  subPostBtn.addEventListener('click', ()=>{
+    interaksiDesc.textContent = 'Dapatkan Interaksi pada postingan — fokus meningkatkan like dan komentar.';
+    paketInteraksi.value = 'Interaksi - Postingan';
+    interaksiOrder.style.display='block';
+    updateInteraksiTotals();
+  });
+  subMsgBtn.addEventListener('click', ()=>{
+    interaksiDesc.textContent = 'Dapatkan Interaksi (Pengiriman Pesan) — mendorong pengguna mengirim pesan ke inbox.';
+    paketInteraksi.value = 'Interaksi - Pengiriman Pesan';
+    interaksiOrder.style.display='block';
+    updateInteraksiTotals();
   });
 
-  // Dashboard order modal behavior
-  var modalDash = document.getElementById('modalOrderDashboard');
-  modalDash.addEventListener('show.bs.modal', function (event){
-    const button = event.relatedTarget;
-    const jenis = button ? button.getAttribute('data-jenis') : 'Iklan';
-    const f = document.getElementById('formDashboard');
-    f.elements['jenis'].value = jenis;
-    f.elements['biaya_harian'].min = 45000;
-    f.elements['biaya_harian'].value = 45000;
-    f.elements['durasi'].min = 5;
-    f.elements['durasi'].value = 5;
-    recalcDashboard();
+  durasiInteraksi.addEventListener('input', ()=>{
+    if(parseInt(durasiInteraksi.value) < 3) durasiInteraksi.value = 3;
+    updateInteraksiTotals();
   });
 
-  function recalcDashboard(){
-    const f = document.getElementById('formDashboard');
-    const biaya = Number(f.elements['biaya_harian'].value || 0);
-    const dur = Number(f.elements['durasi'].value || 0);
-    if(biaya < 45000){ f.elements['asumsi'].value = 'Biaya harian minimal Rp45.000'; f.elements['setup'].value=''; return; }
-    if(dur < 5){ f.elements['asumsi'].value = 'Durasi minimal 5 hari'; f.elements['setup'].value=''; return; }
-    // Hitung setup: 75.000 per 5 hari. For >5 days: add 15.000 per extra day
-    const baseSetup = 75000;
-    if(dur === 5){
-      var setup = baseSetup;
-    } else if (dur > 5){
-      // calculate extra days beyond 5
-      const extra = dur - 5;
-      setup = baseSetup + (extra * 15000);
+  document.getElementById('sendInteraksi').addEventListener('click', ()=>{
+    const nama = document.getElementById('namaInteraksi').value.trim();
+    if(!nama){alert('Mohon isi nama.'); return}
+    const paket = paketInteraksi.value;
+    const dur = parseInt(durasiInteraksi.value);
+    if(isNaN(dur) || dur < 3){alert('Durasi minimal 3 hari.'); return}
+    const daily = parseInt(dailyInteraksi.value);
+    const asum = daily * dur;
+    const setup = parseInt(setupInteraksi.value);
+    const total = asum + setup;
+    const msg = `Halo%20Lead%20Digital%20Marketing,%0ASaya%20${encodeURIComponent(nama)}%20memesan%20paket%20${encodeURIComponent(paket)}.%0ADurasi:%20${dur}%20hari%0ABiaya%20Iklan%20Harian:%20${daily}%0AAsumsi%20Biaya:%20${asum}%0ABiaya%20Setup:%20${setup}%0ATotal:%20${total}`;
+    window.open('https://wa.me/6289682179915?text='+msg, '_blank');
+  });
+
+  // Campaign modal logic
+  const campaignModal = document.getElementById('campaignModal');
+  const campaignOrder = document.getElementById('campaign-order');
+  const campaignBtns = document.querySelectorAll('#campaignModal .list-group-item');
+  const jenisCampaign = document.getElementById('jenisCampaign');
+  const dailyCampaign = document.getElementById('dailyCampaign');
+  const durasiCampaign = document.getElementById('durasiCampaign');
+  const setupCampaign = document.getElementById('setupCampaign');
+  const asumsiCampaign = document.getElementById('asumsiCampaign');
+
+  function updateCampaignSetup(){
+    let dur = parseInt(durasiCampaign.value)||0;
+    if(dur < 5) dur = 5;
+    let base = 75000; // per 5 days
+    if(dur <=5){
+      setupCampaign.value = formatRupiah(base);
+      return base;
     } else {
-      setup = baseSetup;
+      const extra = dur - 5;
+      const extraFee = extra * 15000;
+      const tot = base + extraFee;
+      setupCampaign.value = formatRupiah(tot);
+      return tot;
     }
-    const asumsi = (biaya * dur) + setup;
-    f.elements['setup'].value = formatIDR(setup);
-    f.elements['asumsi'].value = formatIDR(asumsi);
   }
 
-  document.getElementById('formDashboard').addEventListener('input', recalcDashboard);
+  function updateCampaignAsumsi(){
+    const daily = parseInt(dailyCampaign.value)||0;
+    let dur = parseInt(durasiCampaign.value)||0;
+    if(daily < 45000){
+      // enforce minimum
+      dailyCampaign.value = 45000;
+    }
+    if(dur < 5){
+      durasiCampaign.value = 5;
+      dur = 5;
+    }
+    const asum = daily * dur;
+    const setup = updateCampaignSetup();
+    asumsiCampaign.value = formatRupiah(asum + setup);
+  }
 
-  document.getElementById('formDashboard').addEventListener('submit', function(e){
-    e.preventDefault();
-    const f = e.target;
-    const nama = f.elements['nama'].value.trim();
-    const jenis = f.elements['jenis'].value;
-    const biaya = Number(f.elements['biaya_harian'].value);
-    const dur = Number(f.elements['durasi'].value);
-    if(!nama){ alert('Isi nama'); return; }
-    if(biaya < 45000){ alert('Biaya harian minimal Rp45.000'); return; }
-    if(dur < 5){ alert('Durasi minimal 5 hari'); return; }
-    // setup calc
-    let setup = 75000;
-    if(dur > 5){ setup = 75000 + (dur - 5) * 15000; }
-    const asumsi = (biaya * dur) + setup;
-    const msg = `Order%20Lead%20Digital%20Marketing%0ANama:%20${encodeURIComponent(nama)}%0AJenis%20Iklan:%20${encodeURIComponent(jenis)}%0ABiaya%20Harian:%20${formatIDR(biaya)}%0ADurasi:%20${dur}%20hari%0ABiaya%20Setup:%20${formatIDR(setup)}%0AAsumsi%20Biaya:%20${formatIDR(asumsi)}`;
-    const url = `https://wa.me/${WA_NUMBER}?text=${msg}`;
-    window.open(url, '_blank');
-  });
-
-  // Also auto recalc when modals open just in case
-  document.querySelectorAll('#modalOrderDashboard, #modalOrderInteraksi').forEach(mod=>{
-    mod.addEventListener('shown.bs.modal', function(){
-      if(mod.id==='modalOrderDashboard') recalcDashboard(); else recalcInteraksi();
+  campaignBtns.forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      const c = btn.getAttribute('data-camp') || btn.textContent.trim();
+      document.getElementById('campaignModal').querySelector('.modal-title').textContent = 'Paket: ' + c;
+      jenisCampaign.value = c;
+      campaignOrder.style.display='block';
+      // reset defaults
+      dailyCampaign.value = 45000;
+      durasiCampaign.value = 5;
+      updateCampaignAsumsi();
     });
   });
 
+  dailyCampaign.addEventListener('input', ()=>{
+    if(parseInt(dailyCampaign.value) < 45000) dailyCampaign.value = 45000;
+    updateCampaignAsumsi();
+  });
+  durasiCampaign.addEventListener('input', ()=>{
+    if(parseInt(durasiCampaign.value) < 5) durasiCampaign.value = 5;
+    updateCampaignAsumsi();
+  });
+
+  document.getElementById('sendCampaign').addEventListener('click', ()=>{
+    const nama = document.getElementById('namaCampaign').value.trim();
+    if(!nama){alert('Mohon isi nama.'); return}
+    const jenis = jenisCampaign.value;
+    const daily = parseInt(dailyCampaign.value)||45000;
+    const dur = parseInt(durasiCampaign.value)||5;
+    if(daily < 45000){alert('Biaya iklan harian minimal Rp45.000.'); return}
+    if(dur < 5){alert('Durasi minimal 5 hari.'); return}
+    // setup calc
+    const base = 75000;
+    const extra = Math.max(0, dur-5);
+    const setup = base + extra*15000;
+    const asum = daily * dur;
+    const total = asum + setup;
+    const msg = `Halo%20Lead%20Digital%20Marketing,%0ASaya%20${encodeURIComponent(nama)}%20memesan%20paket%20${encodeURIComponent(jenis)}.%0ABiaya%20Iklan%20Harian:%20${daily}%0ADurasi:%20${dur}%20hari%0ABiaya%20Setup:%20${setup}%0AAsumsi%20Biaya:%20${asum}%0ATotal:%20${total}`;
+    window.open('https://wa.me/6289682179915?text='+msg, '_blank');
+  });
+
+  // initialize display values
+  document.addEventListener('DOMContentLoaded', ()=>{
+    updateInteraksiTotals();
+    updateCampaignAsumsi();
+  });
 </script></body>
 </html>
